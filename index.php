@@ -32,7 +32,7 @@ session_destroy();
 		</div>
 		<div id=Lbouton>
 			<div id=bouton>
-				<input type="submit" value="connexi on" />
+				<input type="submit" value="connexion" />
 			</div>
 		</div>
 	</form>
