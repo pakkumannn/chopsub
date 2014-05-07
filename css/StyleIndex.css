@@ -1,0 +1,110 @@
+div#header {
+	width: 800px;	
+	height: 176px;
+	background-color: black; 
+	margin: auto;
+	text-align: center;
+} 
+div#page {
+ 
+	width: 800px;
+	height: auto;
+	background-color: #228751;
+	text-align: center;
+	padding-top: 20px;
+	margin: auto;
+ }
+
+div#titre{
+	width: 800px;
+	height: 50px;
+	text-align: center;
+	margin: auto;
+	font-size: 150%;
+	font-weight: bold;
+ }
+
+div#login {
+	width: 800px;	
+	height: 30px;
+	text-align: center;
+	margin: auto;
+ }
+
+div#text {
+	width: 320px;	
+	height: 30px;
+	text-align: right;
+	margin: auto, auto, -1px, auto;
+	float: left;
+ }
+
+div#saisie {
+	width: 470px;	
+	height: 30px;
+	text-align: left;
+	margin: auto;
+	float: right;
+ }
+
+div#mdp {
+	width: 800px;	
+	height: 30px;
+	text-align: center;
+	margin: auto;
+ }
+
+div#text1 {
+	width: 320px;	
+	height: 30px;
+	text-align: right;
+	margin: auto;
+	float: left;
+ }
+
+div#saisie1 {
+	width: 470px;	
+	height: 30px;
+	text-align: left;
+	margin: auto;
+	float: right;
+	padding-bottom: -10px;
+ }
+
+#Lbouton {
+	width: 792px;	
+	height: 75px;
+	text-align: center;
+	padding-top: 10px;
+	padding-left: 8px;
+	margin: auto;
+}
+
+#bouton {
+	width: 200px;	
+	height: 40px;
+	text-align: center;
+	padding-left: 8px;
+	margin: auto;
+}
+input[type='submit'] {
+	font-family: Arial,sans-serif;
+	font-size: 1.0em;
+	width: 160px;
+	height: 33px;
+	cursor: pointer;;
+	text-align: center;
+	color: #000;
+	background: #EDEDED;
+	margin: auto;
+	background: -webkit-linear-gradient( #EDEDED, #2C2C2C);
+	background:    -moz-linear-gradient( #EDEDED, #2C2C2C);
+	background:     -ms-linear-gradient( #EDEDED, #2C2C2C);
+	background:      -o-linear-gradient( #EDEDED, #2C2C2C);
+	background:         linear-gradient( #EDEDED, #2C2C2C);
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+	border-radius: 8px; 
+	box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5), 0 -1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+

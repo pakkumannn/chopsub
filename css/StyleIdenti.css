@@ -1,0 +1,209 @@
+div#header {
+	width: 800px;	
+	height: 176px;
+	background-color: black; 
+	margin: auto;
+	text-align: center;
+} 
+div#banniere {
+	width: 650px;	
+	height: 170px;
+	background-color: black; 
+	text-align: left;
+	margin: auto;
+	float: left;
+}
+
+div#connexion {
+	width: 150px;	
+	height: 45px;
+	background-color: black; 
+	text-align: center;
+	margin: auto;
+	float: right;
+	color: white;
+	padding-top: 40px;
+}
+div#deco {
+	width: 150px;	
+	height: 87px;
+	background-color: black; 
+	text-align: center;
+	margin: auto;
+	float: right;
+	color: white;
+ }
+div#page {
+ 
+	width: 800px;
+	height: auto;
+	background-color: #228751; 
+	text-align: center;
+	padding-top: 20px;
+	margin: auto;
+	border-radius: 10px; 
+ }
+div#boutonD {
+	font-family: Arial,sans-serif;
+	font-size: 0.8em;
+	width: 100px;
+	height: 20px;
+	cursor: pointer;
+	margin: auto;
+	text-align: center;
+	color: black;
+	background: #007536;
+	border-radius: 8px; 
+	background: -webkit-linear-gradient( #00B454, #007536);
+	background:    -moz-linear-gradient( #00B454, #007536);
+	background:     -ms-linear-gradient( #00B454, #007536);
+	background:      -o-linear-gradient( #00B454, #007536);
+	background:         linear-gradient( #00B454, #007536);
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
+
+ div#MenuP { 
+	width: 750px;
+	height: 100px;
+	text-align: center;
+	border-width: 3px;
+/*	border-style: solid;
+ 	border-color: black;*/
+ 	margin: auto;
+	
+ }
+
+ div#Option1 { 
+	width: 300px;
+	height: 70px;
+/*	background-color: yellow; */
+	float: left;
+	margin-left: 60px;
+	margin-top: 15px;
+ }
+div#bouton1 {
+	font-family: Arial,sans-serif;
+	font-size: 1.5em;
+	width: 250px;
+	height: 50px;
+	padding-top: 20px;
+	cursor: pointer;
+	margin: auto;
+	text-align: center;
+	color: black;
+	background: #007536;
+	border-radius: 8px; 
+	background: -webkit-linear-gradient( #00B454, #007536);
+	background:    -moz-linear-gradient( #00B454, #007536);
+	background:     -ms-linear-gradient( #00B454, #007536);
+	background:      -o-linear-gradient( #00B454, #007536);
+	background:         linear-gradient( #00B454, #007536);
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
+div#bouton1:active {
+	font-family: Arial,sans-serif;
+	font-size: 1.5em;
+	width: 250px;
+	height: 50px;
+	padding-top: 20px;
+	cursor: pointer;
+	text-align: center;
+	color: ##02A458;
+	background: #02A458;
+	margin: auto;
+	border-radius: 8px; 
+	background: -webkit-linear-gradient( #02A458, #2C2C2C);
+	background:    -moz-linear-gradient( #02A458, #2C2C2C);
+	background:     -ms-linear-gradient( #02A458, #2C2C2C);
+	background:      -o-linear-gradient( #02A458, #2C2C2C);
+	background:         linear-gradient( #02A458, #2C2C2C);
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+	box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4); 
+}
+ 
+div#bouton2 {
+	font-family: Arial,sans-serif;
+	font-size: 1.5em;
+	width: 250px;
+	height: 62px;
+	padding-top: 8px;
+	cursor: pointer;
+	margin: auto;
+	text-align: center;
+	color: black;
+	background: #007536;
+	border-radius: 8px; 
+	background: -webkit-linear-gradient( #00B454, #007536);
+	background:    -moz-linear-gradient( #00B454, #007536);
+	background:     -ms-linear-gradient( #00B454, #007536);
+	background:      -o-linear-gradient( #00B454, #007536);
+	background:         linear-gradient( #00B454, #007536);
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
+div#bouton2:active {
+	font-family: Arial,sans-serif;
+	font-size: 1.5em;
+	width: 250px;
+	height: 62px;
+	padding-top: 8px;
+	cursor: pointer;
+	text-align: center;
+	color: ##02A458;
+	background: #02A458;
+	margin: auto;
+	border-radius: 8px; 
+	background: -webkit-linear-gradient( #02A458, #2C2C2C);
+	background:    -moz-linear-gradient( #02A458, #2C2C2C);
+	background:     -ms-linear-gradient( #02A458, #2C2C2C);
+	background:      -o-linear-gradient( #02A458, #2C2C2C);
+	background:         linear-gradient( #02A458, #2C2C2C);
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+	box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4); 
+}
+
+
+
+ div#Option2 { 
+	width: 300px;
+	height: 70px;
+/*	background-color: red; */
+	float: left;
+	margin-left: 40px;
+	margin-top: 15px;
+ }
+ 
+ 
+ div#MenuA { 
+	width: 750px;
+	height: 100px;
+	text-align: center;
+	border-width: 3px;
+	/*border-style: solid;
+ 	border-color: black;*/
+	margin: auto;
+	margin-top: 20px;
+	padding-bottom: 20px;	
+ }
+
+ div#Option3 { 
+	width: 300px;
+	height: 70px;
+/*	background-color: yellow; */
+	float: left;
+	margin-left: 60px;
+	margin-top: 15px;
+ }
+ 
+ div#Option4 { 
+	width: 300px;
+	height: 70px;
+/*	background-color: red; */
+	float: left;
+	margin-left: 40px;
+	margin-top: 15px;
+ 
+}
+ 
+ 
+ 
+
