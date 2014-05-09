@@ -1,3 +1,6 @@
+/**************************************** 
+entete de la page
+******************************************/
 div#header {
 	width: 800px;	
 	height: 176px;
@@ -33,17 +36,6 @@ div#deco {
 	float: right;
 	color: white;
  }
-div#page {
- 
-	width: 800px;
-	height: auto;
-	background-color: #228751; 
-	text-align: center;
-	padding-top: 20px;
-	margin: auto;
-	border-radius: 10px; 
- }
-
 div#boutonD {
 	font-family: Arial,sans-serif;
 	font-size: 0.8em;
@@ -62,3 +54,92 @@ div#boutonD {
 	background:         linear-gradient( #00B454, #007536);
 	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
 }
+/**************************************************
+Style page global
+**************************************************/
+
+div#page {
+ 
+	width: 800px;
+	height: auto;
+	background-color: #228751; 
+	text-align: center;
+	padding-top: 20px;
+	margin: auto;
+	border-radius: 10px; 
+ }
+div.titre {
+	width: 200px;
+	height: 20px;
+	padding-bottom: 10px; 
+	padding-top: 5px;
+	padding-left: 5px;
+}
+/*-----------------------------------
+----------  PAIN 1 -------------------
+-----------------------------------*/
+div#pain {
+	width: 600px;
+	height: 100px;
+	margin: auto;
+	text-align: left;
+	border-width: 2px;
+	border-style: solid;
+	border-color: black;
+}
+
+div.PainL1 {
+	width: 600px;
+	height: 30px;
+	padding-left: 50px;
+ }
+
+div.P1 {
+	width: 100px;
+	text-align: left;
+	float: left;
+	padding-left: 20px;
+}
+
+div.CocheP1 {
+	width: 20px;
+	text-align: left;
+	float: left;
+}
+
+div.TitreP1 {
+	width: 70px;
+	text-align: left;
+	float: left;
+}
+/*-----------------------------------
+----------  TAILLE  -----------------
+-----------------------------------*/
+div#Taille {
+	width: 600px;
+	height: 40px;
+	margin: auto;
+	text-align: left;
+	border-width: 2px;
+	border-style: solid;
+	border-color: black;
+	margin-top: 20px;
+}
+div#titreTaille {
+	width: 150px;
+	height: 30px;
+	padding-bottom: 10px; 
+	padding-top: 7px;
+	padding-left: 5px;
+	float: left;
+}
+
+div#TailleL1 {
+	width: 200px;
+	height: 30px;
+	padding-bottom: 10px; 
+	padding-left: 5px;
+	padding-top: 5px;
+	float: left;
+ }
+
