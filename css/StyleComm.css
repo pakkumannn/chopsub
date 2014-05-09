@@ -1,0 +1,64 @@
+div#header {
+	width: 800px;	
+	height: 176px;
+	background-color: black; 
+	margin: auto;
+	text-align: center;
+} 
+div#banniere {
+	width: 650px;	
+	height: 170px;
+	background-color: black; 
+	text-align: left;
+	margin: auto;
+	float: left;
+}
+
+div#connexion {
+	width: 150px;	
+	height: 45px;
+	background-color: black; 
+	text-align: center;
+	margin: auto;
+	float: right;
+	color: white;
+	padding-top: 40px;
+}
+div#deco {
+	width: 150px;	
+	height: 87px;
+	background-color: black; 
+	text-align: center;
+	margin: auto;
+	float: right;
+	color: white;
+ }
+div#page {
+ 
+	width: 800px;
+	height: auto;
+	background-color: #228751; 
+	text-align: center;
+	padding-top: 20px;
+	margin: auto;
+	border-radius: 10px; 
+ }
+
+div#boutonD {
+	font-family: Arial,sans-serif;
+	font-size: 0.8em;
+	width: 100px;
+	height: 20px;
+	cursor: pointer;
+	margin: auto;
+	text-align: center;
+	color: black;
+	background: #007536;
+	border-radius: 8px; 
+	background: -webkit-linear-gradient( #00B454, #007536);
+	background:    -moz-linear-gradient( #00B454, #007536);
+	background:     -ms-linear-gradient( #00B454, #007536);
+	background:      -o-linear-gradient( #00B454, #007536);
+	background:         linear-gradient( #00B454, #007536);
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
