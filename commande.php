@@ -163,8 +163,176 @@ Si pas de commande
 				</select>	
 		</div>
 	</div>
+	<div id=Viande>
+		<div class=titre>
+			<b>3 - Choix de la viande </b>
+		</div>
+		<div class=ViandeL1>
+			<div class=TypeV1>
+				<b> Poulet : </b>
+			</div>
+			<div class=V1>
+				<div class=CocheV1>
+					<input type="radio" name="viande" value="Teriaky" id="Teriaki" />
+				</div>
+				<div class=TitreV1>
+					Teriaky
+				</div>
+			</div>
+			<div class=V2>
+				<div class=CocheV2>
+					<input type="radio" name="viande" value="Tikka" id="Tikka" />
+				</div>
+				<div class=TitreV2>
+					Tikka (paprika curry)
+				</div>
+			</div>
+		</div>
+		<div class=ViandeL1>
+			<div class=TypeV1>
+				<b>Boeuf : </b>
+			</div>
+			<div class=V1>
+				<div class=CocheV1>
+					<input type="radio" name="viande" value="Steack" id="Steack" />
+				</div>
+				<div class=TitreV1>
+					Steack
+				</div>
+			</div>
+			<div class=V2>
+				<div class=CocheV2>
+					<input type="radio" name="viande" value="Roastbeef" id="Roastbeef" />
+				</div>
+				<div class=TitreV2>
+					Roastbeef
+				</div>
+			</div>
+		</div>
+		<div class=ViandeL1>
+			<div class=TypeV1>
+				<b>Charcuterie : </b>
+			</div>
+			<div class=V1>
+				<div class=CocheV1>
+				<input type="radio" name="viande" value="Dinde" id="Dinde" />
+				</div>
+				<div class=TitreV1>
+					Dinde
+				</div>
+			</div>
+			<div class=V2>
+				<div class=CocheV2>
+				<input type="radio" name="viande" value="Jambon" id="Jambon" />
+				</div>
+				<div class=TitreV2>
+					Jambon
+				</div>
+			</div>
+			<div class=V1>
+				<div class=CocheV1>
+				<input type="radio" name="viande" value="Bacon" id="Bacon" />
+				</div>
+				<div class=TitreV1>
+					Bacon
+				</div>
+			</div>
+		</div>
+		<div class=ViandeL3>
+			<div class=TypeV3>
+				<b>Combinaisons :</b>
+			</div>
+		</div>
+		<div class=ViandeL1>
+			<div class=V3>
+				<div class=CocheV3>
+					<input type="radio" name="viande" value="MELT" id="MELT" />
+				</div>
+				<div class=TitreV3>
+					MELT (Dinde, Jambon, Bacon)
+				</div>			 
+			</div>
+		</div>
+		<div class=ViandeL1>
+			<div class=V3>
+				<div class=CocheV3>
+					<input type="radio" name="viande" value="CLUB" id="CLUB" />
+				</div>
+				<div class=TitreV3>
+					CLUB (Dinde, Jambon, Roasbeef)
+				</div>			 
+			</div>
+		</div>
+		<div class=ViandeL1>
+			<div class=V3>
+				<div class=CocheV3>
+					<input type="radio" name="viande" value="B.M.T" id="B.M.T" />
+				</div>
+				<div class=TitreV3>
+					B.M.T (jambon, Salami, Pepperoni)
+				</div>			 
+			</div>
+		</div>
+		<div class=ViandeL1>
+			<div class=V3>
+				<div class=CocheV3>
+					<input type="radio" name="viande" value="Dinde Jambon" id="Dinde Jambon" />
+				</div>
+				<div class=TitreV3>
+					Dinde / Jambon
+				</div>			 
+			</div>
+		</div>
+		<div class=ViandeL1>
+			<div class=V3>
+				<div class=CocheV3>
+					<input type="radio" name="viande" value="Thon" id="Thon" />
+				</div>
+				<div class=TitreV3>
+					Thon
+				</div>			 
+			</div>
+		</div>
+		<div class=ViandeL1>
+			<div class=V3>
+				<div class=CocheV3>
+					<input type="radio" name="viande" value="Steack vegetarien" id="Steack vegetarien" />
+				</div>
+				<div class=TitreV3>
+					Steack vegetarien
+				</div>			 
+			</div>
+		</div>
+		<div class=ViandeL1>
+			<div class=V3>
+				<div class=CocheV3>
+					<input type="radio" name="viande" value="Meatball" id="Meatball" />
+				</div>
+				<div class=TitreV3>
+					MeatBall (boulette de boeuf sauce tomates legerement epicees)
+				</div>			 
+			</div>
+		</div>
+		
+	</div>
+	<div id=Fromage>
+		<div id=titreFromage>
+			<b>2 -  Choix du formage : </b>
+		</div>		
+		 <div id=FromageL1>
+                                <select name="FromageL1">
+                                        <option value="Emmental"> Emmental </option>
+                                        <option value="Gouda/Cheddar"> Gouda/Cheddar </option>
+                                </select>
+                </div>
+	</div>
+
+
+
+	<div id=footer>
         <a href="identification.php"> <input type="button" value="Accueil"></a>
         <input type="submit" value="Valider">
+	</div>
 	</form>
 	</div>
 

@@ -143,3 +143,129 @@ div#TailleL1 {
 	float: left;
  }
 
+/*-----------------------------------
+----------  VIANDE  -----------------
+-----------------------------------*/
+div#Viande {
+	width: 600px;
+	height: 500px;
+	margin: auto;
+	text-align: left;
+	border-width: 2px;
+	border-style: solid;
+	border-color: black;
+	margin-top: 20px;
+}
+
+div.ViandeL1 {
+	width: 600px;
+	height: 40px;
+	padding-left: 50px;
+ }
+
+div.TypeV1{
+	width: 100px;
+	text-align: left;
+	float: left;
+}
+
+div.V1 {
+	width: 100px;
+	text-align: left;
+	float: left;
+	padding-left: 20px;
+}
+
+div.CocheV1 {
+	width: 20px;
+	text-align: left;
+	float: left;
+}
+
+div.TitreV1 {
+	width: 80px;
+	text-align: left;
+	float: left;
+}
+
+div.V2 {
+	width: 150px;
+	text-align: left;
+	float: left;
+	padding-left: 20px;
+}
+
+div.CocheV2 {
+	width: 20px;
+	text-align: left;
+	float: left;
+}
+
+div.TitreV2 {
+	width: 130px;
+	text-align: left;
+	float: left;
+}
+
+div.ViandeL3 {
+	width: 600px;
+	height: 30px;
+	padding-left: 50px;
+	padding-top: 20px; 
+ }
+div.TypeV3{
+	width: 250px;
+	text-align: left;
+	float: left;
+}
+
+div.V3 {
+	width: 300px;
+	text-align: left;
+	float: left;
+	padding-left: 120px;
+}
+
+div.CocheV3 {
+	width: 20px;
+	text-align: left;
+	float: left;
+}
+
+div.TitreV3 {
+	width: 280px;
+	text-align: left;
+	float: left;
+}
+
+
+/*-----------------------------------
+---------- FROMAGE   ----------------
+-----------------------------------*/
+div#Fromage {
+	width: 600px;
+	height: 40px;
+	margin: auto;
+	text-align: left;
+	border-width: 2px;
+	border-style: solid;
+	border-color: black;
+	margin-top: 20px;
+}
+div#titreFromage {
+	width: 150px;
+	height: 30px;
+	padding-bottom: 10px; 
+	padding-top: 7px;
+	padding-left: 5px;
+	float: left;
+}
+
+div#FromageL1 {
+	width: 200px;
+	height: 30px;
+	padding-bottom: 10px; 
+	padding-left: 5px;
+	padding-top: 5px;
+	float: left;
+ }
