@@ -77,7 +77,7 @@ Si pas de commande
 ?>
 <div id=page>
         <div id=formulaire>
-        <form action="verifPerso.php" method="post">
+        <form action="verifCommande.php" method="post">
 	<div id=pain>		
 		<div class=titre>
 			<b>1 -  Choix du pain : </b>
@@ -317,21 +317,225 @@ Si pas de commande
 	</div>
 	<div id=Fromage>
 		<div id=titreFromage>
-			<b>2 -  Choix du formage : </b>
+			<b>4 -  Choix du formage : </b>
 		</div>		
 		 <div id=FromageL1>
-                                <select name="FromageL1">
+                                <select name="fromage">
                                         <option value="Emmental"> Emmental </option>
                                         <option value="Gouda/Cheddar"> Gouda/Cheddar </option>
                                 </select>
                 </div>
 	</div>
-
-
+	<div id=Temperature>
+		<div id=titreTempe>
+			<b>5 - Chaud et froid :  </b>
+		</div>		
+		 <div id=TemperatureL1>
+                                <select name="temperature">
+                                        <option value="chaud"> chaud </option>
+                                        <option value="froid"> froid </option>
+                                </select>
+                </div>
+	</div>
+<div id=legume>		
+		<div class=titre>
+			<b>6 -  Choix des legumes : </b>
+		</div>		
+		<div class=legumeL1>
+			<div class=LegumeP1>
+				<div class=CocheLeg1>
+				<input type="checkbox" name="legume1" value="Salade" id="legume1" />
+				</div>
+				<div class=TitreLeg1>
+				Salade
+				</div>
+			</div>
+			<div class=LegumeP1>
+				<div class=CocheLeg1>
+				<input type="checkbox" name="legume2" value="Tomate" id="Tomate" />
+				</div>
+				<div class=TitreLeg1>
+				Tomate
+				</div>
+			</div>
+			<div class=LegumeP1>
+				<div class=CocheLeg1>
+				<input type="checkbox" name="legume3" value="Oignon" id="Oignon" />				
+				</div>
+				<div class=TitreLeg1>
+				Oignon
+				</div>
+			</div>
+			<div class=LegumeP1>
+				<div class=CocheLeg1>
+				<input type="checkbox" name="legume4" value="Concombre" id="Concombre" />
+				</div>
+				<div class=TitreLeg1>
+				Concombre
+				</div>
+			</div>
+		</div>
+		<div class=legumeL1>
+			<div class=LegumeP1>
+				<div class=CocheLeg1>
+				<input type="checkbox" name="legume6" value="Poivron" id="Poivron" />	
+				</div>
+				<div class=TitreLeg1>
+				Poivron
+				</div>
+			</div>
+			<div class=LegumeP1>
+				<div class=CocheLeg1>
+				<input type="checkbox" name="legume7" value="Mais" id="Mais" />
+				</div>
+				<div class=TitreLeg1>
+				Mais
+				</div>
+			</div>
+			<div class=LegumeP1>
+				<div class=CocheLeg1>
+				<input type="checkbox" name="legume8" value="Carotte" id="Carotte" />
+				</div>
+				<div class=TitreLeg1>
+				Carotte
+				</div>
+			</div>
+			<div class=LegumeP1>
+				<div class=CocheLeg1>
+				<input type="checkbox" name="legume9" value="Olive" id="Olive" />
+				</div>
+				<div class=TitreLeg1>
+				Olive
+				</div>
+			</div>
+		</div>
+		<div class=legumeL1>
+			<div class=LegumeP1>
+				<div class=CocheLeg1>
+				<input type="checkbox" name="legume5" value="Piment" id="Piment" />
+				</div>
+				<div class=TitreLeg1>
+				Piment
+				</div>
+			</div>
+			<div class=LegumeP1>
+				<div class=CocheLeg1>
+				<input type="checkbox" name="legume10" value="Cornichon" id="Cornichon" />	
+				</div>
+				<div class=TitreLeg1>
+				Cornichon
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id=Sauce>		
+		<div class=titre>
+			<b>7 -  Choix de la sauce : </b>
+		</div>		
+		<div class=SauceL1>
+			<div class=SauceP1>
+				<div class=CocheS1>
+				<input type="radio" name="sauce" value="Mayonnaise" id="Mayonnaise" />
+				</div>
+				<div class=TitreS1>
+				Mayonnaise
+				</div>
+			</div>
+			<div class=SauceP1>
+				<div class=CocheS1>
+				<input type="radio" name="sauce" value="Ketchup" id="Ketchup" /> 
+				</div>
+				<div class=TitreS1>
+				Ketchup
+				</div>
+			</div>
+			<div class=SauceP1>
+				<div class=CocheS1>
+				<input type="radio" name="sauce" value="Huile/Vinaigre" id="Huile/Vinaigre" />
+				</div>
+				<div class=TitreS1>
+				Huile/Vinaigre
+				</div>
+			</div>
+			<div class=SauceP1>
+				<div class=CocheS1>
+				<input type="radio" name="sauce" value="Barbecue" id="Barbcue" />
+				</div>
+				<div class=TitreS1>
+				Barbecue
+				</div>
+			</div>
+		</div>
+		<div class=SauceL1>
+			<div class=SauceP1>
+				<div class=CocheS1>
+				<input type="radio" name="sauce" value="Moutarde" id="Moutarde" />
+				</div>
+				<div class=TitreS1>
+				Moutarde
+				</div>
+			</div>
+			<div class=SauceP1>
+				<div class=CocheS1>
+				<input type="radio" name="sauce" value="Chipotle West" id="Chipotle West" /> 
+				</div>
+				<div class=TitreS1>
+				Chipotle West
+				</div>
+			</div>
+			<div class=SauceP1>
+				<div class=CocheS1>
+				<input type="radio" name="sauce" value="Oignons doux" id="Oignons doux" />
+				</div>
+				<div class=TitreS1>
+				Oignons doux
+				</div>
+			</div>
+			<div class=SauceP1>
+				<div class=CocheS1>
+				<input type="radio" name="sauce" value="Moutarde/Miel" id="Moutarde/Miel" />
+				</div>
+				<div class=TitreS1>
+				Moutard/Miel
+				</div>
+			</div>
+		</div>
+		<div class=SauceL1>
+			<div class=SauceP2>
+				<div class=CocheS2>
+				<input type="radio" name="sauce" value="Asiago" id="Asiago" />	
+				</div>
+				<div class=TitreS2>
+				Asiago (fromagere)
+				</div>
+			</div>
+			<div class=SauceP2>
+				<div class=CocheS2>
+				<input type="radio" name="sauce" value="Ranch" id="Ranch" /> 
+				</div>
+				<div class=TitreS2>
+				Ranch (ail et fines herbes)
+				</div>
+			</div>
+			<div class=SauceP2>
+				<div class=CocheS2>
+				<input type="radio" name="sauce" value="Sans sauce" id="Sans sauce" /> 
+				</div>
+				<div class=TitreS2>
+				Sans sauce
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div id=footer>
-        <a href="identification.php"> <input type="button" value="Accueil"></a>
-        <input type="submit" value="Valider">
+
+			<div id=bouton1 onclick="self.location.href='identification.php'">
+				ACCUEIL
+			</div>
+			<div id=bouton1 onclick="self.location.href='identification.php'">
+		        <input type="submit">
+			</div>
 	</div>
 	</form>
 	</div>
