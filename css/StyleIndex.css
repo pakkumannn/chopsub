@@ -85,6 +85,7 @@ div#saisie1 {
 	font-size: 1.0em;
 	width: 160px;
 	height: 30px;
+	border: 0px;
 	cursor: pointer;
 	margin: auto;
 	text-align: center;

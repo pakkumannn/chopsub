@@ -533,7 +533,7 @@ Si pas de commande
 			<div id=bouton1 onclick="self.location.href='identification.php'">
 				ACCUEIL
 			</div>
-		        <input type="submit" value="valider">
+		        <input type="submit" value="VALIDER" id="boutonV">
 	</div>
 	</form>
 	</div>
