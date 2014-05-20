@@ -431,15 +431,16 @@ div#bouton1 {
 div#bouton1:active {
 	font-family: Arial,sans-serif;
 	float: left;
-	font-size: 1.5em;
-	width: 250px;
-	height: 50px;
-	padding-top: 20px;
+	font-size: 1.0em;
+	width: 150px;
+	height: 30px;
+	padding-top: 10px;
 	cursor: pointer;
-	text-align: center;
-	color: ##02A458;
-	background: #02A458;
 	margin: auto;
+	margin-right: 20px;
+	text-align: center;
+	color: black;
+	background: #007536;
 	border-radius: 8px; 
 	background: -webkit-linear-gradient( #02A458, #2C2C2C);
 	background:    -moz-linear-gradient( #02A458, #2C2C2C);
@@ -449,3 +450,26 @@ div#bouton1:active {
 	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
 	box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4); 
 }
+input[type="submit"] {
+	text-decoration: none;
+	border-radius: none;
+	font-family: Arial,sans-serif;
+	float: left;
+	font-size: 1.0em;
+	width: 150px;
+	height: 40px;
+	cursor: pointer;
+	margin: auto;
+	margin-right: 20px;
+	text-align: center;
+	color: black;
+	background: #007536;
+	border-radius: 8px; 
+	background: -webkit-linear-gradient( #00B454, #007536);
+	background:    -moz-linear-gradient( #00B454, #007536);
+	background:     -ms-linear-gradient( #00B454, #007536);
+	background:      -o-linear-gradient( #00B454, #007536);
+	background:         linear-gradient( #00B454, #007536);
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
+
