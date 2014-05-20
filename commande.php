@@ -48,7 +48,7 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonD onclick="self.location.href='deconnexion.php'">
+			<div id=boutonErr onclick="self.location.href='deconnexion.php'">
 				deconnexion	
 			</div>
 	</div>
@@ -63,11 +63,17 @@ SI Commande deja passe
 $menu1 = $bdd->query("SELECT COUNT(*) as com FROM commande where nom='".$login."'");
 $donnees1 = $menu1->fetch();
 if ($donnees1['com']!=0) {
-        echo "Vous avez deja passe commande";
-        echo "</duv>";
-        echo "<div id=footer>";
-        echo    "<a href='identification.php'> <input type='button' value='Accueil'></a>";
-        echo "</div>";
+	?>	
+	<div id=page>
+			<div id=text>
+				Vous avez deja passe une commande
+			</div>
+			</br>
+			<div id=boutonD onclick="self.location.href='identification.php'">
+				Accueil	
+			</div>
+		</div>		
+<?php
 }else
 {
 $menu1->closeCursor();
@@ -559,8 +565,9 @@ Si erreur de login
 			<div id=text>
 			Erreur sur le mdp ou le login
 			</div>
-			<div id=boutonD onclick="self.location.href='deconnexion.php'">
-				deconnexion	
+			</br>
+			<div id=boutonErr onclick="self.location.href='deconnexion.php'">
+				CONNEXION	
 			</div>
 		</div>		
 <?php } ?>
