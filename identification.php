@@ -38,7 +38,7 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonD onclick="self.location.href='deconnexion.php'">
+			<div id=boutonDH onclick="self.location.href='deconnexion.php'">
 				deconnexion	
 			</div>
 	</div>
@@ -93,8 +93,9 @@ else {
 			<div id=text>
 			Erreur sur le mdp ou le login
 			</div>
+			</br>
 			<div id=boutonD onclick="self.location.href='deconnexion.php'">
-				deconnexion	
+				CONNEXION	
 			</div>
 		</div>		
 

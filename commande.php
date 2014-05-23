@@ -48,7 +48,7 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonErr onclick="self.location.href='deconnexion.php'">
+			<div id=boutonD onclick="self.location.href='deconnexion.php'">
 				deconnexion	
 			</div>
 	</div>
@@ -58,25 +58,25 @@ if ($donnees1['nb1']==1) {
 <?php
 $connection->closeCursor();
 /********************************************************
-SI Commande deja passe
+si commande deja passe
 ********************************************************/
-$menu1 = $bdd->query("SELECT COUNT(*) as com FROM commande where nom='".$login."'");
+$menu1 = $bdd->query("select count(*) as com from commande where nom='".$login."'");
 $donnees1 = $menu1->fetch();
 if ($donnees1['com']!=0) {
 	?>	
 	<div id=page>
 			<div id=text>
-				Vous avez deja passe une commande
+				vous avez deja passe une commande
 			</div>
 			</br>
-			<div id=boutonD onclick="self.location.href='identification.php'">
-				Accueil	
+			<div id=boutonErr onclick="self.location.href='identification.php'">
+				ACCUEIL	
 			</div>
 		</div>		
 <?php
 }else
 {
-$menu1->closeCursor();
+$menu1->closecursor();
 /********************************************************
 Si pas de commande
 *********************************************************/
@@ -107,7 +107,7 @@ Si pas de commande
 			</div>
 			<div class=P1>
 				<div class=CocheP1>
-				<input type="radio" name="pain" value="P.Arigan" id="P.Origan" />
+				<input type="radio" name="pain" value="P.Origan" id="P.Origan" />
 				</div>
 				<div class=TitreP1>
 				P.Origan
@@ -184,6 +184,9 @@ Si pas de commande
 				<div class=TitreV1>
 					Teriaky
 				</div>
+				<div class=prix>
+					4,5 / 7E
+				</div>
 			</div>
 			<div class=V2>
 				<div class=CocheV2>
@@ -191,6 +194,9 @@ Si pas de commande
 				</div>
 				<div class=TitreV2>
 					Tikka (paprika curry)
+				</div>
+				<div class=prix>
+					4,5 / 7E
 				</div>
 			</div>
 		</div>
@@ -200,18 +206,13 @@ Si pas de commande
 			</div>
 			<div class=V1>
 				<div class=CocheV1>
-					<input type="radio" name="viande" value="Steack" id="Steack" />
-				</div>
-				<div class=TitreV1>
-					Steack
-				</div>
-			</div>
-			<div class=V2>
-				<div class=CocheV2>
 					<input type="radio" name="viande" value="Roastbeef" id="Roastbeef" />
 				</div>
-				<div class=TitreV2>
+				<div class=TitreV1>
 					Roastbeef
+				</div>
+				<div class=prix>
+					4,5 / 7E
 				</div>
 			</div>
 		</div>
@@ -226,6 +227,9 @@ Si pas de commande
 				<div class=TitreV1>
 					Dinde
 				</div>
+				<div class=prix>
+					3,5 / 6E
+				</div>
 			</div>
 			<div class=V2>
 				<div class=CocheV2>
@@ -234,13 +238,8 @@ Si pas de commande
 				<div class=TitreV2>
 					Jambon
 				</div>
-			</div>
-			<div class=V1>
-				<div class=CocheV1>
-				<input type="radio" name="viande" value="Bacon" id="Bacon" />
-				</div>
-				<div class=TitreV1>
-					Bacon
+				<div class=prix>
+					3,5 / 6E
 				</div>
 			</div>
 		</div>
@@ -252,11 +251,40 @@ Si pas de commande
 		<div class=ViandeL1>
 			<div class=V3>
 				<div class=CocheV3>
+				<input type="radio" name="viande" value="Steak & cheese" id="Steak & cheese" />
+				</div>
+				<div class=TitreV3>
+					Steak & cheese (steak, oigons, poivrons, fromage)
+				</div>
+				<div class=prix>
+					4,5 / 7E
+				</div>
+			</div>
+		</div>
+		<div class=ViandeL1>
+			<div class=V3>
+				<div class=CocheV3>
+				<input type="radio" name="viande" value="Spicy Italien" id="Spicy Italien" />
+				</div>
+				<div class=TitreV3>
+					Spicy Italien (salami, pepperoni)
+				</div>
+				<div class=prix>
+					3,5 / 6E
+				</div>
+			</div>
+		</div>
+		<div class=ViandeL1>
+			<div class=V3>
+				<div class=CocheV3>
 					<input type="radio" name="viande" value="MELT" id="MELT" />
 				</div>
 				<div class=TitreV3>
 					MELT (Dinde, Jambon, Bacon)
 				</div>			 
+				<div class=prix>
+					4 / 6,5E
+				</div>
 			</div>
 		</div>
 		<div class=ViandeL1>
@@ -267,6 +295,9 @@ Si pas de commande
 				<div class=TitreV3>
 					CLUB (Dinde, Jambon, Roasbeef)
 				</div>			 
+				<div class=prix>
+					4 / 6,5E
+				</div>
 			</div>
 		</div>
 		<div class=ViandeL1>
@@ -277,6 +308,9 @@ Si pas de commande
 				<div class=TitreV3>
 					B.M.T (jambon, Salami, Pepperoni)
 				</div>			 
+				<div class=prix>
+					4 / 6,5E
+				</div>
 			</div>
 		</div>
 		<div class=ViandeL1>
@@ -287,6 +321,9 @@ Si pas de commande
 				<div class=TitreV3>
 					Dinde / Jambon
 				</div>			 
+				<div class=prix>
+					3,5 / 6E
+				</div>
 			</div>
 		</div>
 		<div class=ViandeL1>
@@ -297,6 +334,9 @@ Si pas de commande
 				<div class=TitreV3>
 					Thon
 				</div>			 
+				<div class=prix>
+					4,5 / 7E
+				</div>
 			</div>
 		</div>
 		<div class=ViandeL1>
@@ -307,6 +347,9 @@ Si pas de commande
 				<div class=TitreV3>
 					Steack vegetarien
 				</div>			 
+				<div class=prix>
+					4 / 6,5E
+				</div>
 			</div>
 		</div>
 		<div class=ViandeL1>
@@ -317,6 +360,9 @@ Si pas de commande
 				<div class=TitreV3>
 					MeatBall (boulette de boeuf sauce tomates legerement epicees)
 				</div>			 
+				<div class=prix>
+					4,5 / 7E
+				</div>
 			</div>
 		</div>
 		

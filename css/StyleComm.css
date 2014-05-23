@@ -36,13 +36,16 @@ div#deco {
 	float: right;
 	color: white;
  }
+
 div#boutonD {
 	font-family: Arial,sans-serif;
 	font-size: 0.8em;
+	font-weight: bold; 
 	width: 100px;
 	height: 20px;
 	cursor: pointer;
 	margin: auto;
+	margin-bottom: 10px;
 	text-align: center;
 	color: black;
 	background: #007536;
@@ -53,6 +56,27 @@ div#boutonD {
 	background:      -o-linear-gradient( #00B454, #007536);
 	background:         linear-gradient( #00B454, #007536);
 	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
+
+div#boutonD:active {
+	font-family: Arial,sans-serif;
+	font-size: 0.8em;
+	width: 100px;
+	height: 20px;
+	cursor: pointer;
+	margin: auto;
+	margin-bottom: 10px;
+	text-align: center;
+	color: black;
+	background: #007536;
+	border-radius: 8px; 
+	background: -webkit-linear-gradient( #02A458, #2C2C2C);
+	background:    -moz-linear-gradient( #02A458, #2C2C2C);
+	background:     -ms-linear-gradient( #02A458, #2C2C2C);
+	background:      -o-linear-gradient( #02A458, #2C2C2C);
+	background:         linear-gradient( #02A458, #2C2C2C);
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+	box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4); 
 }
 /**************************************************
 Style page global
@@ -150,7 +174,7 @@ div#TailleL1 {
 -----------------------------------*/
 div#Viande {
 	width: 600px;
-	height: 500px;
+	height: 550px;
 	margin: auto;
 	text-align: left;
 	border-width: 2px;
@@ -172,7 +196,7 @@ div.TypeV1{
 }
 
 div.V1 {
-	width: 100px;
+	width: 160px;
 	text-align: left;
 	float: left;
 	padding-left: 20px;
@@ -191,7 +215,7 @@ div.TitreV1 {
 }
 
 div.V2 {
-	width: 150px;
+	width: 210px;
 	text-align: left;
 	float: left;
 	padding-left: 20px;
@@ -204,16 +228,20 @@ div.CocheV2 {
 }
 
 div.TitreV2 {
-	width: 130px;
+	width: 140px;
 	text-align: left;
 	float: left;
 }
+div.ViandeL2 {
+	width: 600px;
+	height: 40px;
+	padding-left: 150px;
+ }
 
 div.ViandeL3 {
 	width: 600px;
 	height: 30px;
 	padding-left: 50px;
-	padding-top: 20px; 
  }
 div.TypeV3{
 	width: 250px;
@@ -222,7 +250,7 @@ div.TypeV3{
 }
 
 div.V3 {
-	width: 300px;
+	width: 400px;
 	text-align: left;
 	float: left;
 	padding-left: 120px;
@@ -237,6 +265,11 @@ div.CocheV3 {
 div.TitreV3 {
 	width: 280px;
 	text-align: left;
+	float: left;
+}
+div.prix {
+	width: 50px;
+	text-align: right;
 	float: left;
 }
 
@@ -475,6 +508,30 @@ div#bouton1:active {
 	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
 }
 
+#boutonV:active {
+	text-decoration: none;
+	border: 0px;
+	font-family: Arial,sans-serif;
+	float: left;
+	font-size: 1.0em;
+	width: 150px;
+	height: 40px;
+	cursor: pointer;
+	margin: auto;
+	margin-right: 20px;
+	text-align: center;
+	color: black;
+	background: #007536;
+	border-radius: 8px; 
+	background: -webkit-linear-gradient( #02A458, #2C2C2C);
+	background:    -moz-linear-gradient( #02A458, #2C2C2C);
+	background:     -ms-linear-gradient( #02A458, #2C2C2C);
+	background:      -o-linear-gradient( #02A458, #2C2C2C);
+	background:         linear-gradient( #02A458, #2C2C2C);
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+	box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4); 
+}
+
 div#boutonErr {
 	font-family: Arial,sans-serif;
 	font-size: 0.8em;
@@ -494,6 +551,28 @@ div#boutonErr {
 	background:      -o-linear-gradient( #00B454, #007536);
 	background:         linear-gradient( #00B454, #007536);
 	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
+
+div#boutonErr:active {
+	font-family: Arial,sans-serif;
+	font-size: 0.8em;
+	width: 110px;
+	height: 30px;
+	padding-top: 10px;
+	cursor: pointer;
+	margin: auto;
+	margin-bottom: 10px;
+	text-align: center;
+	color: black;
+	background: #007536;
+	border-radius: 8px; 
+	background: -webkit-linear-gradient( #02A458, #2C2C2C);
+	background:    -moz-linear-gradient( #02A458, #2C2C2C);
+	background:     -ms-linear-gradient( #02A458, #2C2C2C);
+	background:      -o-linear-gradient( #02A458, #2C2C2C);
+	background:         linear-gradient( #02A458, #2C2C2C);
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+	box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4); 
 }
 div#text {
 	font-size: 1.2em;

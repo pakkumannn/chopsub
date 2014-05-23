@@ -58,39 +58,123 @@ if ($donnees1['nb1']==1) {
 <?php
 $connection->closeCursor();
 /********************************************************
-SI Commande deja passe
+si commande deja passe
 ********************************************************/
-$menu1 = $bdd->query("SELECT COUNT(*) as com FROM commande where nom='".$login."'");
+$menu1 = $bdd->query("select count(*) as com from commande where nom='".$login."'");
 $donnees1 = $menu1->fetch();
 if ($donnees1['com']!=0) {
-        echo "Vous avez deja passe commande";
-        echo "</duv>";
-        echo "<div id=footer>";
-        echo    "<a href='identification.php'> <input type='button' value='Accueil'></a>";
-        echo "</div>";
+	?>	
+	<div id=page>
+			<div id=text>
+				vous avez deja passe une commande
+			</div>
+			</br>
+			<div id=boutonErr onclick="self.location.href='identification.php'">
+				ACCUEIL	
+			</div>
+		</div>		
+<?php
 }else
 {
-$menu1->closeCursor();
+$menu1->closecursor();
 /********************************************************
 Si pas de commande Affichage de la page
 *********************************************************/
-
-echo $_POST['pain'];
-echo $_POST['taille'];
-echo $_POST['viande'];  
-echo $_POST['fromage'];  
-echo $_POST['temperature'];  
-echo $_POST['sauce'];  
-echo $_POST['legume1'];  
-echo $_POST['legume2'];  
-echo $_POST['legume3'];  
-echo $_POST['legume4'];  
-echo $_POST['legume5'];  
-echo $_POST['legume6'];  
-echo $_POST['legume7'];  
-echo $_POST['legume8'];  
-echo $_POST['legume9'];  
-echo $_POST['legume10'];  
+?>
+<div id=page>
+	<div id=text>
+	Voici le resume de votre commande
+	</div>
+	<div class=ligne1>
+		<div class=col1> PAIN :</div>
+		<div class=col2> <? echo $_POST['pain']; ?></div>
+	</div>
+	<div class=ligne1>
+		<div class=col1> TAILLE :</div>
+		<div class=col2> <? echo $_POST['taille']; ?></div>
+	</div>
+	<div class=ligne1>
+		<div class=col1> VIANDE :</div>
+		<div class=col2> <? echo $_POST['viande']; ?></div>
+	</div>
+	<div class=ligne1>
+		<div class=col1> FROMAGE :</div>
+		<div class=col2> <? echo $_POST['temperature']; ?></div>
+	</div>
+	<div class=ligne1>
+		<div class=col1> TEMPERATURE :</div>
+		<div class=col2> <? echo $_POST['sauce']; ?></div>
+	</div>
+	<div class=ligne1>
+		<div class=col1> LEGUMES :</div>
+		<div class=col2> <?php echo $_POST['legume1']; ?> </div>
+	</div>
+	<? if ($_POST['legume2']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo $_POST['legume2'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume3']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo $_POST['legume3'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume4']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo $_POST['legume4'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume5']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo $_POST['legume5'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume6']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo $_POST['legume6'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume7']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo $_POST['legume7'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume8']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo $_POST['legume8'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume9']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo $_POST['legume9'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume10']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo $_POST['legume10'];
+			echo"</div>";
+		echo "</div>";
+	}
+?>
+</div>
+<?php
 
 }
 
