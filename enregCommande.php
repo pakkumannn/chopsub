@@ -5,7 +5,7 @@ include "connexion.php";
 $bdd = connexion();
 ?>
 <head>
-	<link href="../chopsub/css/StyleVerifComm.css" rel="stylesheet" media="all" type="text/css">
+	<link href="../chopsub/css/StyleEnregComm.css" rel="stylesheet" media="all" type="text/css">
 </head>
 
 <body>
@@ -83,31 +83,22 @@ Si pas de commande Affichage de la page
 ?>
 <div id=page>
 <?php
+if ($_POST['pain']=='' || $_POST['taille']=='' || $_POST['viande']=='' || $_POST['fromage']=='' || $_POST['temperature']=='' || $_POST['sauce']=='') {
+    echo "<div class=text>";
+	echo "Vous avez une erreur dans votre commande ";
+	echo "<div id=footer>";
+	?>
+		<a href="javascript:history.back()"><input type="button" value="retour" id=bouton1></a>
+	<?php
+	echo "</div>";
+	echo "</div>";
+} 
+else {
 
-
-echo $_GET['pain'];
-echo $_GET['taille'];
-echo $_GET['viande'];
-echo $_GET['fromage'];
-echo $_GET['temperature'];
-echo $_GET['legume1'];
-echo $_GET['legume2'];
-echo $_GET['legume3'];
-echo $_GET['legume4'];
-echo $_GET['legume5'];
-echo $_GET['legume6'];
-echo $_GET['legume7'];
-echo $_GET['legume8'];
-echo $_GET['legume9'];
-echo $_GET['legume10'];
-echo $_GET['sauce'];
-
+$date = date("Y-m-d");
+$bdd->exec("INSERT INTO commande (nom, pain, taille, viande, fromage, temperature, legume1, legume2, legume3, legume4, legume5, legume6, legume7, legume8, legume9, legume10, sauce, date) VALUES ('".$login."','".$_GET['pain']."','".$_GET['taille']."','".$_GET['viande']."','".$_GET['fromage']."','".$_GET['temperature']."','".$_GET['legume1']."','".$_GET['legume2']."','".$_GET['legume3']."','".$_GET['legume4']."','".$_GET['legume5']."','".$_GET['legume6']."','".$_GET['legume7']."','".$_GET['legume8']."','".$_GET['legume9']."','".$_GET['legume10']."','".$_GET['sauce']."','".$date."');");
+}
 ?>
-
-
-
-
-
 
 </div>
 <?php

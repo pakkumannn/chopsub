@@ -43,39 +43,8 @@ if ($donnees1['nb1']==1) {
 			</div>
 	</div>
 </div>
-<div id=page>
-	<div id=MenuP>
-		<div id=Option1>
-			<div id=bouton1 onclick="self.location.href='commande.php'">
-				commander
-			</div>
-		</div>
-		<div id=Option2>	
-			<div id=bouton2 onclick="self.location.href='affichComm.php'">
-				visualiser ma commande
-			</div>
-		</div>
-	</div>
 	<?php
 	$connection->closeCursor();
-	$connection2 = $bdd->query("SELECT admin FROM identi where login='".$login."' AND mdp='".$mdp."'");
-	$donnee2 = $connection2->fetch();
-	if ($donnee2['admin']==1) {
-	?>
-	<div id=MenuA>
-		<div id=Option3>
-			<div id=bouton1 onclick="self.location.href='commande.php'">
-				Impression PDF
-			</div>
-		</div>
-		<div id=Option4>
-			<div id=bouton1 onclick="self.location.href='commande.php'">
-				Creer un compte	
-			</div>
-		</div>
-	</div>
-	<?php
-		}
 	?>
 </div>
 
@@ -101,8 +70,12 @@ else {
 
 	<?php
 }	
-
 $connection2->closeCursor();
 ?>
+
+
+
+
+
 </body>
 </html>
