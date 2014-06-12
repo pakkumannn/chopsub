@@ -68,16 +68,116 @@ if ($donnees1['nb1']==1) {
 }else
 {
 $menu1->closeCursor();
-echo "<b>Ma Commande</b>";
 $menu2 = $bdd->query("SELECT * FROM commande where nom='".$login."'");
 $donnees2 = $menu2->fetch();
+?>
+	<div id=text>
+	Voici le resume de votre commande
+	</div>
+	<div class=ligne1>
+		<div class=col1> PAIN :</div>
+		<div class=col2> <? echo $donnees2['pain']; ?></div>
+	</div>
+	<div class=ligne1>
+		<div class=col1> TAILLE :</div>
+		<div class=col2> <? echo $donnees2['taille']; ?></div>
+	</div>
+	<div class=ligne1>
+		<div class=col1> VIANDE :</div>
+		<div class=col2> <? echo $donnees2['viande']; ?></div>
+	</div>
+	<div class=ligne1>
+		<div class=col1> FROMAGE :</div>
+		<div class=col2> <? echo $donnees2['fromage']; ?></div>
+	</div>
+	<div class=ligne1>
+		<div class=col1> TEMPERATURE :</div>
+		<div class=col2> <? echo  $donnees2['temperature']; ?></div>
+	</div>
+	<div class=ligne1>
+		<div class=col1> SAUCE :</div>
+		<div class=col2> <? echo  $donnees2['sauce']; ?></div>
+	</div>
+	<div class=ligne1>
+		<div class=col1> LEGUMES :</div>
+		<div class=col2> <?php echo  $donnees2['legume1']; ?> </div>
+	</div>
+	<? if ($_POST['legume2']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo  $donnees2['legume2'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume3']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo  $donnees2['legume3'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume4']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo  $donnees2['legume4'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume5']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo  $donnees2['legume5'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume6']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo  $donnees2['legume6'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume7']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo  $donnees2['legume7'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume8']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo  $donnees2['legume8'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume9']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo  $donnees2['legume9'];
+			echo"</div>";
+		echo "</div>";
+	}
+	 if ($_POST['legume10']!=''){
+		echo "<div class=ligne1>";
+			echo "<div class=col2b>";
+				echo  $donnees2['legume10'];
+			echo"</div>";
+		echo "</div>";
+	}
+
+?>
+	<div class=ligne1>
+		<div class=col1> PRIX:</div>
+		<div class=col2> <? echo $donnees2['prix']" euros"; ?></div>
+	</div>
+
+
+
+
+<?php
 echo "</div>";
 }
-?>
-
-
-
-		<?php
 }
 else {
 	?>
