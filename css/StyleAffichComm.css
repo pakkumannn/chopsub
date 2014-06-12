@@ -141,3 +141,11 @@ div#page {
 	margin: auto;
 
 }
+
+div#footer {
+	width: 800px;	
+	height: 70px;
+	text-align: center;
+	margin: auto;
+	padding-top: 10px;
+}

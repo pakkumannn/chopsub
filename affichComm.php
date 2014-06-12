@@ -5,7 +5,7 @@ include "connexion.php";
 $bdd = connexion();
 ?>
 <head>
-<link href="../chopsub/css/StyleIdenti.css" rel="stylesheet" media="all" type="text/css">
+<link href="../chopsub/css/StyleAffichComm.css" rel="stylesheet" media="all" type="text/css">
 </head>
 
 <body>
@@ -38,7 +38,7 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonDH onclick="self.location.href='deconnexion.php'">
+			<div id=boutonD onclick="self.location.href='deconnexion.php'">
 				deconnexion	
 			</div>
 	</div>
@@ -46,7 +46,35 @@ if ($donnees1['nb1']==1) {
 	<?php
 	$connection->closeCursor();
 	?>
+
+
+
+
+<div id=page>
+	<?php
+	$menu1 = $bdd->query("SELECT COUNT(*) as com FROM commande where nom='".$login."'");
+	$donnees1 = $menu1->fetch();
+	if ($donnees1['com']==0) {
+	?>
+		Vous n'avez pas passe de commande
+	<div id=footer>
+			<div id=boutonErr onclick="self.location.href='identification.php'">
+				ACCUEIL	
+			</div>
+	</div>
 </div>
+
+<?php
+}else
+{
+$menu1->closeCursor();
+echo "<b>Ma Commande</b>";
+$menu2 = $bdd->query("SELECT * FROM commande where nom='".$login."'");
+$donnees2 = $menu2->fetch();
+echo "</div>";
+}
+?>
+
 
 
 		<?php

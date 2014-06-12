@@ -190,6 +190,169 @@ else {
 		echo "</div>";
 	}
 
+?>
+
+	<div class=ligne1>
+
+<?php
+
+if ($_POST['taille']=='30 cm') {
+	if ($_POST['viande']=='Teriaky') {
+	$prix='7';
+	}
+	else {
+		if ($_POST['viande']=='Tikka') {
+		$prix='7';
+		}
+		else {
+			if ($_POST['viande']=='Roastbeef') {
+			$prix='7';
+			}
+			else {
+				if ($_POST['viande']=='Dinde') {
+				$prix='6';
+				}
+				else {
+					if ($_POST['viande']=='Jambon') {
+					$prix='6';
+					}
+					else {
+						if ($_POST['viande']=='MELT') {
+						$prix='6,5';
+						}	
+						else {
+							if ($_POST['viande']=='CLUB') {
+							$prix='6,5';
+							}
+							else {
+								if ($_POST['viande']=='B.M.T') {
+								$prix='6,5';
+								}
+								else {
+									if ($_POST['viande']=='Dinde Jambon') {
+									$prix='6';
+									}
+									else {
+										if ($_POST['viande']=='Thon') {
+										$prix='7';
+										}
+										else {
+											if ($_POST['viande']=='Steack vegetarien') {
+											$prix='6,5';
+											}
+											else {
+												if ($_POST['viande']=='Meatball') {
+												$prix='7';
+												}
+												else {
+													 if ($_POST['viande']=='Steak & cheese') {
+													 $prix='7';
+													}
+													else {
+														if ($_POST['viande']=='Spicy Italien') {
+														$prix='6';
+														}
+													}	
+												}
+											}	
+										}
+									}		
+								}
+							}		
+						}
+					}		
+				}	
+			}	
+		}	
+	}
+}
+
+
+if ($_POST['taille']=='15 cm') {
+	if ($_POST['viande']=='Teriaky') {
+	$prix='4,5';
+	}
+	else {
+		if ($_POST['viande']=='Tikka') {
+		$prix='4,5';
+		}
+		else {
+			if ($_POST['viande']=='Roastbeef') {
+			$prix='4,5';
+			}
+			else {
+				if ($_POST['viande']=='Dinde') {
+				$prix='3,5';
+				}
+				else {
+					if ($_POST['viande']=='Jambon') {
+					$prix='3,5';
+					}
+					else {
+						if ($_POST['viande']=='MELT') {
+						$prix='4';
+						}	
+						else {
+							if ($_POST['viande']=='CLUB') {
+							$prix='4';
+							}
+							else {
+								if ($_POST['viande']=='B.M.T') {
+								$prix='4';
+								}
+								else {
+									if ($_POST['viande']=='Dinde Jambon') {
+									$prix='3,5';
+									}
+									else {
+										if ($_POST['viande']=='Thon') {
+										$prix='4,5';
+										}
+										else {
+											if ($_POST['viande']=='Steack vegetarien') {
+											$prix='4';
+											}
+											else {
+												if ($_POST['viande']=='Meatball') {
+												$prix='4,5';
+												}
+												else {
+													 if ($_POST['viande']=='Steak & cheese') {
+													 $prix='4,5';
+													}
+													else {
+														if ($_POST['viande']=='Spicy Italien') {
+														$prix='3,5';
+														}
+													}	
+												}
+											}	
+										}
+									}		
+								}
+							}		
+						}
+					}		
+				}	
+			}	
+		}	
+	}
+}
+
+?>
+
+
+
+
+
+
+
+		<div class=col1> PRIX : </div>
+		<div class=col2> <? echo $prix; ?></div>
+	</div>
+
+
+<?php
 echo "<div id=footer>";
 $pain=$_POST['pain'];
 $taille=$_POST['taille'];
