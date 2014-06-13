@@ -9,6 +9,7 @@ session_destroy();
 ?>
 <head>
 <link href="../chopsub/css/StyleIndex.css" rel="stylesheet" media="all" type="text/css">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
 <body>

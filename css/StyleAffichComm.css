@@ -186,18 +186,17 @@ div#footer {
 	padding-top: 20px;
 	padding-left: 240px;
 }
-
-#bouton1 {
+div#bouton1 {
 	font-family: Arial,sans-serif;
 	float: left;
 	font-size: 1.0em;
 	width: 150px;
-	height: 40px;
+	height: 30px;
+	padding-top: 10px;
 	cursor: pointer;
 	margin: auto;
 	margin-right: 20px;
 	text-align: center;
-	border: 0px;
 	color: black;
 	background: #007536;
 	border-radius: 8px; 
@@ -208,12 +207,12 @@ div#footer {
 	background:         linear-gradient( #00B454, #007536);
 	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
 }
-#bouton1:active {
+div#bouton1:active {
 	font-family: Arial,sans-serif;
 	float: left;
 	font-size: 1.0em;
 	width: 150px;
-	height: 40px;
+	height: 30px;
 	padding-top: 10px;
 	cursor: pointer;
 	margin: auto;

@@ -6,6 +6,7 @@ $bdd = connexion();
 ?>
 <head>
 	<link href="../chopsub/css/StyleVerifComm.css" rel="stylesheet" media="all" type="text/css">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
 <body>

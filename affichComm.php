@@ -3,9 +3,11 @@
 <?php
 include "connexion.php";
 $bdd = connexion();
+error_reporting(E_ALL);
 ?>
 <head>
 <link href="../chopsub/css/StyleAffichComm.css" rel="stylesheet" media="all" type="text/css">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
 <body>
@@ -169,11 +171,17 @@ $donnees2 = $menu2->fetch();
 ?>
 	<div class=ligne1>
 		<div class=col1> PRIX:</div>
-		<div class=col2> <? echo $donnees2['prix']" euros"; ?></div>
+		<div class=col2> <? echo $donnees2['prix']; ?> euros </div>
 	</div>
-
-
-
+	
+<div id=footer>
+			<div id=bouton1 onclick="self.location.href='identification.php'">
+				ACCUEIL
+			</div>
+			<div id=bouton1 onclick="self.location.href='suppcomm.php'">
+				SUPPRESSION
+			</div>
+</div>
 
 <?php
 echo "</div>";
