@@ -58,8 +58,8 @@ if ($donnees1['nb1']==1) {
 	$donnees1 = $menu1->fetch();
 	if ($donnees1['com']==0) {
 	?>
-		Vous n'avez pas passe de commande
-	<div id=footer>
+		Vous n'avez pas passé de commande
+	<div id=footer2>
 			<div id=boutonErr onclick="self.location.href='identification.php'">
 				ACCUEIL	
 			</div>
@@ -74,7 +74,7 @@ $menu2 = $bdd->query("SELECT * FROM commande where nom='".$login."'");
 $donnees2 = $menu2->fetch();
 ?>
 	<div id=text>
-	Voici le resume de votre commande
+	Voici le resumé de votre commande
 	</div>
 	<div class=ligne1>
 		<div class=col1> PAIN :</div>

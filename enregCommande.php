@@ -50,7 +50,7 @@ if ($donnees1['nb1']==1) {
 	</div>
 	<div id=deco>
 			<div id=boutonD onclick="self.location.href='deconnexion.php'">
-				deconnexion	
+				déconnexion	
 			</div>
 	</div>
 </div>
@@ -67,7 +67,7 @@ if ($donnees1['com']!=0) {
 	?>	
 	<div id=page>
 			<div id=text>
-				vous avez deja passe une commande
+				vous avez déjà passé une commande
 			</div>
 			</br>
 			<div id=boutonErr onclick="self.location.href='identification.php'">
@@ -101,7 +101,7 @@ $bdd->exec("INSERT INTO commande (nom, pain, taille, viande, fromage, temperatur
 ?>
 
 	<div id=text>
-		Votre commande est enregistre
+		Votre commande est enregistrÉ
 	</div>	
 
 

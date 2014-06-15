@@ -67,7 +67,7 @@ if ($donnees1['com']!=0) {
 	?>	
 	<div id=page>
 			<div id=text>
-				vous avez deja passe une commande
+				vous avez déjà passé une commande
 			</div>
 			</br>
 			<div id=boutonErr onclick="self.location.href='identification.php'">
@@ -86,7 +86,7 @@ Si pas de commande Affichage de la page
 <?php
 if ($_POST['pain']=='' || $_POST['taille']=='' || $_POST['viande']=='' || $_POST['fromage']=='' || $_POST['temperature']=='' || $_POST['sauce']=='') {
     echo "<div class=text>";
-	echo "Vous avez une erreur dans votre commande vous avez oublie un ingredient";
+	echo "Vous avez une erreur dans votre commande vous avez oublié un ingredient";
 	echo "<div id=footer>";
 	?>
 		<a href="javascript:history.back()"><input type="button" value="retour" id=bouton1></a>
@@ -97,7 +97,7 @@ if ($_POST['pain']=='' || $_POST['taille']=='' || $_POST['viande']=='' || $_POST
 else {
 ?>
 	<div id=text>
-	Voici le resume de votre commande
+	Voici le résumé de votre commande
 	</div>
 	<div class=ligne1>
 		<div class=col1> PAIN :</div>

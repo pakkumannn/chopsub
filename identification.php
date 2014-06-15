@@ -48,12 +48,12 @@ if ($donnees1['nb1']==1) {
 	<div id=MenuP>
 		<div id=Option1>
 			<div id=bouton1 onclick="self.location.href='commande.php'">
-				commander
+				Commander
 			</div>
 		</div>
 		<div id=Option2>	
 			<div id=bouton2 onclick="self.location.href='affichComm.php'">
-				visualiser ma commande
+				Visualiser ma commande
 			</div>
 		</div>
 	</div>
@@ -71,7 +71,7 @@ if ($donnees1['nb1']==1) {
 		</div>
 		<div id=Option4>
 			<div id=bouton1 onclick="self.location.href='commande.php'">
-				Creer un compte	
+				Créer un compte	
 			</div>
 		</div>
 	</div>

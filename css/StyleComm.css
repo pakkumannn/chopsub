@@ -105,7 +105,7 @@ div.titre {
 ----------  PAIN 1 -------------------
 -----------------------------------*/
 div#pain {
-	width: 600px;
+	width: 650px;
 	height: 100px;
 	margin: auto;
 	text-align: left;
@@ -115,13 +115,13 @@ div#pain {
 }
 
 div.PainL1 {
-	width: 600px;
+	width: 650px;
 	height: 30px;
 	padding-left: 50px;
  }
 
 div.P1 {
-	width: 100px;
+	width: 110px;
 	text-align: left;
 	float: left;
 	padding-left: 20px;
@@ -142,7 +142,7 @@ div.TitreP1 {
 ----------  TAILLE  -----------------
 -----------------------------------*/
 div#Taille {
-	width: 600px;
+	width: 650px;
 	height: 40px;
 	margin: auto;
 	text-align: left;
@@ -152,7 +152,7 @@ div#Taille {
 	margin-top: 20px;
 }
 div#titreTaille {
-	width: 150px;
+	width: 160px;
 	height: 30px;
 	padding-bottom: 10px; 
 	padding-top: 7px;
@@ -173,7 +173,7 @@ div#TailleL1 {
 ----------  VIANDE  -----------------
 -----------------------------------*/
 div#Viande {
-	width: 600px;
+	width: 650px;
 	height: 550px;
 	margin: auto;
 	text-align: left;
@@ -215,7 +215,7 @@ div.TitreV1 {
 }
 
 div.V2 {
-	width: 210px;
+	width: 220px;
 	text-align: left;
 	float: left;
 	padding-left: 20px;
@@ -268,7 +268,7 @@ div.TitreV3 {
 	float: left;
 }
 div.prix {
-	width: 50px;
+	width: 55px;
 	text-align: right;
 	float: left;
 }
@@ -278,7 +278,7 @@ div.prix {
 ---------- FROMAGE   ----------------
 -----------------------------------*/
 div#Fromage {
-	width: 600px;
+	width: 650px;
 	height: 40px;
 	margin: auto;
 	text-align: left;
@@ -309,7 +309,7 @@ div#FromageL1 {
 ---------- FROMAGE   ----------------
 -----------------------------------*/
 div#Temperature {
-	width: 600px;
+	width: 650px;
 	height: 40px;
 	margin: auto;
 	text-align: left;
@@ -339,7 +339,7 @@ div#TemperatureL1 {
 ---------- LEGUMES  -----------------
 -----------------------------------*/
 div#legume {
-	width: 600px;
+	width: 650px;
 	height: 125px;
 	margin: auto;
 	text-align: left;
@@ -377,7 +377,7 @@ div.TitreLeg1 {
 ---------- SAUCES  -----------------
 -----------------------------------*/
 div#Sauce {
-	width: 600px;
+	width: 650px;
 	height: 150px;
 	margin: auto;
 	text-align: left;
@@ -388,13 +388,13 @@ div#Sauce {
 }
 
 div.SauceL1 {
-	width: 600px;
+	width: 700px;
 	height: 30px;
 	padding-left: 50px;
  }
 
 div.SauceP1 {
-	width: 110px;
+	width: 1É0px;
 	text-align: left;
 	float: left;
 	padding-left: 20px;
@@ -407,12 +407,12 @@ div.CocheS1 {
 }
 
 div.TitreS1 {
-	width: 90px;
+	width: 110px;
 	text-align: left;
 	float: left;
 }
 div.SauceP2 {
-	width: 110px;
+	width: 130px;
 	height: auto;
 	text-align: left;
 	float: left;
@@ -426,7 +426,7 @@ div.CocheS2 {
 }
 
 div.TitreS2 {
-	width: 90px;
+	width: 110px;
 	text-align: left;
 	float: left;
 }

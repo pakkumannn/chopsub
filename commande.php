@@ -105,15 +105,7 @@ Si pas de commande
 				<div class=TitreP1>
 				Italien
 				</div>
-			</div>
-			<div class=P1>
-				<div class=CocheP1>
-				<input type="radio" name="pain" value="P.Origan" id="P.Origan" />
-				</div>
-				<div class=TitreP1>
-				P.Origan
-				</div>
-			</div>
+			</div>		
 			<div class=P1>
 				<div class=CocheP1>
 				<input type="radio" name="pain" value="Avoine Miel" id="avoine miel" /> 
@@ -122,6 +114,15 @@ Si pas de commande
 				Avoine/Miel	
 				</div>
 			</div>
+			<div class=P1>
+				<div class=CocheP1>
+				<input type="radio" name="pain" value="P.Origan" id="P.Origan" />
+				</div>
+				<div class=TitreP1>
+				Parmesan/Origan
+				</div>
+			</div>
+
 		</div>
 
 		<div class=PainL1>
@@ -133,14 +134,14 @@ Si pas de commande
 				Complet
 				</div>
 			</div>
-			<div class=P1>
+			<!-- <div class=P1>
 				<div class=CocheP1>
 				<input type="radio" name="pain" value="Wrap" id="Wrap" />
 				</div>
 				<div class=TitreP1>
 				Wrap
 				</div>
-			</div>
+			</div> -->
 			<div class=P1>
 				<div class=CocheP1>
 				<input type="radio" name="pain" value="Flatbread" id="Flatbread" />
@@ -186,7 +187,7 @@ Si pas de commande
 					Teriaky
 				</div>
 				<div class=prix>
-					4,5 / 7E
+					4,5 / 7€
 				</div>
 			</div>
 			<div class=V2>
@@ -197,7 +198,7 @@ Si pas de commande
 					Tikka (paprika curry)
 				</div>
 				<div class=prix>
-					4,5 / 7E
+					4,5 / 7€
 				</div>
 			</div>
 		</div>
@@ -213,7 +214,7 @@ Si pas de commande
 					Roastbeef
 				</div>
 				<div class=prix>
-					4,5 / 7E
+					4,5 / 7€
 				</div>
 			</div>
 		</div>
@@ -229,7 +230,7 @@ Si pas de commande
 					Dinde
 				</div>
 				<div class=prix>
-					3,5 / 6E
+					3,5 / 6€
 				</div>
 			</div>
 			<div class=V2>
@@ -240,7 +241,7 @@ Si pas de commande
 					Jambon
 				</div>
 				<div class=prix>
-					3,5 / 6E
+					3,5 / 6€
 				</div>
 			</div>
 		</div>
@@ -255,10 +256,10 @@ Si pas de commande
 				<input type="radio" name="viande" value="Steak & cheese" id="Steak & cheese" />
 				</div>
 				<div class=TitreV3>
-					Steak & cheese (steak, oigons, poivrons, fromage)
+					Steak & cheese (steak, oignons, poivrons, fromage)
 				</div>
 				<div class=prix>
-					4,5 / 7E
+					4,5 / 7€
 				</div>
 			</div>
 		</div>
@@ -271,7 +272,7 @@ Si pas de commande
 					Spicy Italien (salami, pepperoni)
 				</div>
 				<div class=prix>
-					3,5 / 6E
+					3,5 / 6€
 				</div>
 			</div>
 		</div>
@@ -284,7 +285,7 @@ Si pas de commande
 					MELT (Dinde, Jambon, Bacon)
 				</div>			 
 				<div class=prix>
-					4 / 6,5E
+					4 / 6,5€
 				</div>
 			</div>
 		</div>
@@ -297,7 +298,7 @@ Si pas de commande
 					CLUB (Dinde, Jambon, Roasbeef)
 				</div>			 
 				<div class=prix>
-					4 / 6,5E
+					4 / 6,5€
 				</div>
 			</div>
 		</div>
@@ -310,7 +311,7 @@ Si pas de commande
 					B.M.T (jambon, Salami, Pepperoni)
 				</div>			 
 				<div class=prix>
-					4 / 6,5E
+					4 / 6,5€
 				</div>
 			</div>
 		</div>
@@ -323,7 +324,7 @@ Si pas de commande
 					Dinde / Jambon
 				</div>			 
 				<div class=prix>
-					3,5 / 6E
+					3,5 / 6€
 				</div>
 			</div>
 		</div>
@@ -336,7 +337,7 @@ Si pas de commande
 					Thon
 				</div>			 
 				<div class=prix>
-					4,5 / 7E
+					4,5 / 7€
 				</div>
 			</div>
 		</div>
@@ -346,10 +347,10 @@ Si pas de commande
 					<input type="radio" name="viande" value="Steack vegetarien" id="Steack vegetarien" />
 				</div>
 				<div class=TitreV3>
-					Steack vegetarien
+					Steack végétarien
 				</div>			 
 				<div class=prix>
-					4 / 6,5E
+					4 / 6,5€
 				</div>
 			</div>
 		</div>
@@ -362,7 +363,7 @@ Si pas de commande
 					MeatBall (boulette de boeuf sauce tomates legerement epicees)
 				</div>			 
 				<div class=prix>
-					4,5 / 7E
+					4,5 / 7€
 				</div>
 			</div>
 		</div>
@@ -370,7 +371,7 @@ Si pas de commande
 	</div>
 	<div id=Fromage>
 		<div id=titreFromage>
-			<b>4 -  Choix du formage : </b>
+			<b>4 -  Choix du fromage : </b>
 		</div>		
 		 <div id=FromageL1>
                                 <select name="fromage">
@@ -392,7 +393,7 @@ Si pas de commande
 	</div>
 <div id=legume>		
 		<div class=titre>
-			<b>6 -  Choix des legumes : </b>
+			<b>6 -  Choix des légumes : </b>
 		</div>		
 		<div class=legumeL1>
 			<div class=LegumeP1>
@@ -549,7 +550,7 @@ Si pas de commande
 				<input type="radio" name="sauce" value="Moutarde/Miel" id="Moutarde/Miel" />
 				</div>
 				<div class=TitreS1>
-				Moutard/Miel
+				Moutarde/Miel
 				</div>
 			</div>
 		</div>
@@ -559,7 +560,7 @@ Si pas de commande
 				<input type="radio" name="sauce" value="Asiago" id="Asiago" />	
 				</div>
 				<div class=TitreS2>
-				Asiago (fromagere)
+				Asiago (fromagère)
 				</div>
 			</div>
 			<div class=SauceP2>
