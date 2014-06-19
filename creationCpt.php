@@ -5,7 +5,7 @@ include "connexion.php";
 $bdd = connexion();
 ?>
 <head>
-<link href="../chopsub/css/StyleIdenti.css" rel="stylesheet" media="all" type="text/css">
+<link href="../chopsub/css/StyleCreatCpt.css" rel="stylesheet" media="all" type="text/css">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
@@ -39,49 +39,65 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonDH onclick="self.location.href='deconnexion.php'">
+			<div id=boutonD onclick="self.location.href='deconnexion.php'">
 				deconnexion	
 			</div>
 	</div>
 </div>
+
+<?php $connection->closeCursor(); ?>
+
 <div id=page>
-	<div id=MenuP>
-		<div id=Option1>
-			<div id=bouton1 onclick="self.location.href='commande.php'">
-				Commander
+<?php
+$nlogin=$_POST['nlogin'];
+$nmdp=md5($_POST['nmdp']);
+$connection2 = $bdd->query("SELECT COUNT(*) as nb1 FROM identi where login='".$nlogin."'");
+$donnees2 = $connection2->fetch();
+if ($donnees2['nb1'] !=0) {
+?>
+	<div class=text> login deja existant </div>
+		<div id=footer>
+			<div id=boutonV onclick="self.location.href='newCpt.php'">
+				RETOUR	
 			</div>
 		</div>
-		<div id=Option2>	
-			<div id=bouton2 onclick="self.location.href='affichComm.php'">
-				Visualiser ma commande
+<?
+}
+else {
+	$connection2->closeCursor();
+	if ($_POST['nlogin'] !='' and $_POST['nmdp'] !='')
+	{
+		$req="insert into identi (login, mdp) values ('".$nlogin."','".$nmdp."')";
+		$bdd->exec($req);
+		?>
+		<div class=text> Creation du compte effectué. </div>
+			<div id=footer>
+				<div id=boutonV onclick="self.location.href='identification.php'">
+					ACCUEIL
+				</div>
 			</div>
-		</div>
-	</div>
-	<?php
-	$connection->closeCursor();
-	$connection2 = $bdd->query("SELECT admin FROM identi where login='".$login."' AND mdp='".$mdp."'");
-	$donnee2 = $connection2->fetch();
-	if ($donnee2['admin']==1) {
-	?>
-	<div id=MenuA>
-		<div id=Option3>
-			<div id=bouton1 onclick="self.location.href='pdf.php'">
-				Impression PDF
-			</div>
-		</div>
-		<div id=Option4>
-			<div id=bouton1 onclick="self.location.href='newCpt.php'">
-				Créer un compte	
-			</div>
-		</div>
-	</div>
-	<?php
-		}
-	?>
-</div>
-
-
 		<?php
+	}
+	else 
+	{
+	?>
+		<div class=text> Erreur dans la saisie du login ou mdp </div>
+		<?php
+		echo $_POST['nlogin'];
+		echo $_POST['nmdp']
+?>
+		<div id=footer>
+			<div id=boutonV onclick="self.location.href='newCpt.php'">
+				ACCUEIL	
+			</div>
+		</div>
+		<?php
+		
+	}
+
+
+}
+echo "</div>";
 }
 else {
 	?>
@@ -103,7 +119,8 @@ else {
 	<?php
 }	
 
-$connection2->closeCursor();
 ?>
 </body>
 </html>
+
+

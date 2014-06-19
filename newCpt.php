@@ -5,7 +5,7 @@ include "connexion.php";
 $bdd = connexion();
 ?>
 <head>
-<link href="../chopsub/css/StyleIdenti.css" rel="stylesheet" media="all" type="text/css">
+<link href="../chopsub/css/StyleNewCpt.css" rel="stylesheet" media="all" type="text/css">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
@@ -39,47 +39,36 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonDH onclick="self.location.href='deconnexion.php'">
+			<div id=boutonD onclick="self.location.href='deconnexion.php'">
 				deconnexion	
 			</div>
 	</div>
 </div>
 <div id=page>
-	<div id=MenuP>
-		<div id=Option1>
-			<div id=bouton1 onclick="self.location.href='commande.php'">
-				Commander
-			</div>
+	<div id=titre> CREATION D'UN NOUVEAU COMPTE </div>
+	<form action="creationCpt.php" method="post">
+		<div id=login>
+			<div id=text> nouveau login :</div>
+			<div id=saisie> <input type="text" name="nlogin" /> </div>
 		</div>
-		<div id=Option2>	
-			<div id=bouton2 onclick="self.location.href='affichComm.php'">
-				Visualiser ma commande
-			</div>
+		<div id=mdp>
+			<div id=text1> nouveau mot de passe : </div>
+			<div id=saisie1> <input type="password" name="nmdp" /> </div>
 		</div>
-	</div>
-	<?php
-	$connection->closeCursor();
-	$connection2 = $bdd->query("SELECT admin FROM identi where login='".$login."' AND mdp='".$mdp."'");
-	$donnee2 = $connection2->fetch();
-	if ($donnee2['admin']==1) {
-	?>
-	<div id=MenuA>
-		<div id=Option3>
-			<div id=bouton1 onclick="self.location.href='pdf.php'">
-				Impression PDF
-			</div>
-		</div>
-		<div id=Option4>
-			<div id=bouton1 onclick="self.location.href='newCpt.php'">
-				Créer un compte	
-			</div>
-		</div>
-	</div>
-	<?php
-		}
-	?>
-</div>
 
+
+
+	<div id=footer>
+
+			<div id=bouton1 onclick="self.location.href='identification.php'">
+				ACCUEIL
+			</div>
+		        <input type="submit" value="VALIDER" id="boutonV">
+	</div>
+	</div>
+		</div>
+</form>
+</div>
 
 		<?php
 }
@@ -105,5 +94,9 @@ else {
 
 $connection2->closeCursor();
 ?>
+
+
 </body>
 </html>
+
+
