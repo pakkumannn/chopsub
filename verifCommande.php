@@ -89,7 +89,7 @@ if ($_POST['pain']=='' || $_POST['taille']=='' || $_POST['viande']=='' || $_POST
 	echo "Vous avez une erreur dans votre commande vous avez oublié un ingredient";
 	echo "<div id=footer>";
 	?>
-		<a href="javascript:history.back()"><input type="button" value="retour" id=bouton1></a>
+		<a href="javascript:history.back()">RETOUR</a>
 	<?php
 	echo "</div>";
 	echo "</div>";
@@ -371,11 +371,17 @@ $legume8=$_POST['legume8'];
 $legume9=$_POST['legume9'];
 $legume10=$_POST['legume10'];
 $sauce=$_POST['sauce'];
-echo "<a href='enregCommande.php?pain=".$pain."&taille=".$taille."&viande=".$viande."&fromage=".$fromage."&temperature=".$temperature."&legume1=".$legume1."&legume2=".$legume2."&legume3=".$legume3."&legume4=".$legume4."&legume5=".$legume5."&legume6=".$legume6."&legume7=".$legume7."&legume8=".$legume8."&legume9=".$legume9."&legume10=".$legume10."&sauce=".$sauce."&prix=".$prix."'> <input type='button' value='Enregistrer' id=bouton1></a>";
+?>
+<a href="javascript:history.back()">RETOUR</a>
+<?php
+echo "<a href='enregCommande.php?pain=".$pain."&taille=".$taille."&viande=".$viande."&fromage=".$fromage."&temperature=".$temperature."&legume1=".$legume1."&legume2=".$legume2."&legume3=".$legume3."&legume4=".$legume4."&legume5=".$legume5."&legume6=".$legume6."&legume7=".$legume7."&legume8=".$legume8."&legume9=".$legume9."&legume10=".$legume10."&sauce=".$sauce."&prix=".$prix."'> ENREGISTER </a>";
 
+
+/*
+echo "<a href='enregCommande.php?pain=".$pain."&taille=".$taille."&viande=".$viande."&fromage=".$fromage."&temperature=".$temperature."&legume1=".$legume1."&legume2=".$legume2."&legume3=".$legume3."&legume4=".$legume4."&legume5=".$legume5."&legume6=".$legume6."&legume7=".$legume7."&legume8=".$legume8."&legume9=".$legume9."&legume10=".$legume10."&sauce=".$sauce."&prix=".$prix."'> <input type='button' value='Enregistrer' id=bouton1></a>";
+*/
 ?>
 
-<a href="javascript:history.back()"><input type="button" value="retour" id=bouton1></a>
 </div>
 </div>
 </div>
