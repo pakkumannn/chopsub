@@ -38,3 +38,5 @@ session_destroy();
 		</div>
 	</form>
 </div>
+</body>
+</html>
