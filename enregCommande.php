@@ -101,7 +101,7 @@ $bdd->exec("INSERT INTO commande (nom, pain, taille, viande, fromage, temperatur
 ?>
 
 	<div id=text>
-		Votre commande est enregistrÉ
+		Votre commande est enregistrée
 	</div>	
 
 

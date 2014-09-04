@@ -65,9 +65,10 @@ if ($donnees1['nb1']==1) {
 	?>
 	<div id=MenuA>
 		<div id=Option3>
-			<div id=bouton1 onclick="self.location.href='pdf.php'">
+			<div id=bouton1 onclick="javascript:window.open('pdf.php')">
+
 				Impression PDF
-			</div>
+			</div> 
 		</div>
 		<div id=Option4>
 			<div id=bouton1 onclick="self.location.href='newCpt.php'">

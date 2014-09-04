@@ -74,7 +74,7 @@ $menu2 = $bdd->query("SELECT * FROM commande where nom='".$login."'");
 $donnees2 = $menu2->fetch();
 ?>
 	<div id=text>
-	Voici le resumé de votre commande
+	Voici le résumé de votre commande
 	</div>
 	<div class=ligne1>
 		<div class=col1> PAIN :</div>
@@ -104,63 +104,63 @@ $donnees2 = $menu2->fetch();
 		<div class=col1> LEGUMES :</div>
 		<div class=col2> <?php echo  $donnees2['legume1']; ?> </div>
 	</div>
-	<? if ($_POST['legume2']!=''){
+	<? if ($donnees2['legume2']!=''){
 		echo "<div class=ligne1>";
 			echo "<div class=col2b>";
 				echo  $donnees2['legume2'];
 			echo"</div>";
 		echo "</div>";
 	}
-	 if ($_POST['legume3']!=''){
+	 if ($donnees2['legume3']!=''){
 		echo "<div class=ligne1>";
 			echo "<div class=col2b>";
 				echo  $donnees2['legume3'];
 			echo"</div>";
 		echo "</div>";
 	}
-	 if ($_POST['legume4']!=''){
+	 if ($donnees2['legume4']!=''){
 		echo "<div class=ligne1>";
 			echo "<div class=col2b>";
 				echo  $donnees2['legume4'];
 			echo"</div>";
 		echo "</div>";
 	}
-	 if ($_POST['legume5']!=''){
+	 if ($donnees2['legume5']!=''){
 		echo "<div class=ligne1>";
 			echo "<div class=col2b>";
 				echo  $donnees2['legume5'];
 			echo"</div>";
 		echo "</div>";
 	}
-	 if ($_POST['legume6']!=''){
+	 if ($donnees2['legume6']!=''){
 		echo "<div class=ligne1>";
 			echo "<div class=col2b>";
 				echo  $donnees2['legume6'];
 			echo"</div>";
 		echo "</div>";
 	}
-	 if ($_POST['legume7']!=''){
+	 if ($donnees2['legume7']!=''){
 		echo "<div class=ligne1>";
 			echo "<div class=col2b>";
 				echo  $donnees2['legume7'];
 			echo"</div>";
 		echo "</div>";
 	}
-	 if ($_POST['legume8']!=''){
+	 if ($donnees2['legume8']!=''){
 		echo "<div class=ligne1>";
 			echo "<div class=col2b>";
 				echo  $donnees2['legume8'];
 			echo"</div>";
 		echo "</div>";
 	}
-	 if ($_POST['legume9']!=''){
+	 if ($donnees2['legume9']!=''){
 		echo "<div class=ligne1>";
 			echo "<div class=col2b>";
 				echo  $donnees2['legume9'];
 			echo"</div>";
 		echo "</div>";
 	}
-	 if ($_POST['legume10']!=''){
+	 if ($donnees2['legume10']!=''){
 		echo "<div class=ligne1>";
 			echo "<div class=col2b>";
 				echo  $donnees2['legume10'];
