@@ -2,10 +2,7 @@
 <html>
 <?php
 /*include "connexion.php";
-$bdd = connexion();
-ALLER MARCHE
-
-*/
+$bdd = connexion();*/
 session_start();
 session_unset();
 session_destroy();
