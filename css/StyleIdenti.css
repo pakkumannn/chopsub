@@ -323,5 +323,25 @@ div#bouton2:active {
 }
  
  
+ div#MenuA2 { 
+	width: 750px;
+	height: 100px;
+	text-align: center;
+	border-width: 3px;
+	/*border-style: solid;
+ 	border-color: black;*/
+	margin: auto;
+	margin-top: 20px;
+	padding-bottom: 20px;	
+ }
+
+ div#Option5 { 
+	width: 300px;
+	height: 70px;
+/*	background-color: yellow; */
+	float: left;
+	margin-left: 230px;
+	margin-top: 15px;
+ }
  
 

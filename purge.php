@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <?php
@@ -44,52 +45,26 @@ if ($donnees1['nb1']==1) {
 			</div>
 	</div>
 </div>
-<div id=page>
-	<div id=MenuP>
-		<div id=Option1>
-			<div id=bouton1 onclick="self.location.href='commande.php'">
-				Commander
-			</div>
-		</div>
-		<div id=Option2>	
-			<div id=bouton2 onclick="self.location.href='affichComm.php'">
-				Visualiser ma commande
-			</div>
-		</div>
-	</div>
 	<?php
 	$connection->closeCursor();
-	$connection2 = $bdd->query("SELECT admin FROM identi where login='".$login."' AND mdp='".$mdp."'");
-	$donnee2 = $connection2->fetch();
-	if ($donnee2['admin']==1) {
 	?>
-	<div id=MenuA>
-		<div id=Option3>
-			<div id=bouton1 onclick="javascript:window.open('pdf.php')">
+<div id=page>
 
-				Impression PDF
-			</div> 
-		</div>
-		<div id=Option4>
-			<div id=bouton1 onclick="self.location.href='newCpt.php'">
-				Créer un compte	
-			</div>
-		</div>
-	</div>
-	<div id=MenuA2>
-		<div id=Option5>
-			<div id=bouton1 onclick="self.location.href='confPurge.php'">
 
-				purger les commandes
-			</div> 
-		</div>
-	</div>
 	<?php
-		}
+		$supp = $bdd->query("delete from commande");
 	?>
+
+<div id=text>
+	Purge OK
+</div>	
+	<div id=boutonD onclick="self.location.href='identification.php'">
+				ACCUEIL
+	</div>
+
+
+
 </div>
-
-
 		<?php
 }
 else {
@@ -114,5 +89,9 @@ else {
 
 $connection2->closeCursor();
 ?>
+
+
 </body>
 </html>
+
+

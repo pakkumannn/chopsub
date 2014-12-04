@@ -45,51 +45,16 @@ if ($donnees1['nb1']==1) {
 	</div>
 </div>
 <div id=page>
-	<div id=MenuP>
-		<div id=Option1>
-			<div id=bouton1 onclick="self.location.href='commande.php'">
-				Commander
-			</div>
-		</div>
-		<div id=Option2>	
-			<div id=bouton2 onclick="self.location.href='affichComm.php'">
-				Visualiser ma commande
-			</div>
-		</div>
-	</div>
-	<?php
-	$connection->closeCursor();
-	$connection2 = $bdd->query("SELECT admin FROM identi where login='".$login."' AND mdp='".$mdp."'");
-	$donnee2 = $connection2->fetch();
-	if ($donnee2['admin']==1) {
-	?>
-	<div id=MenuA>
-		<div id=Option3>
-			<div id=bouton1 onclick="javascript:window.open('pdf.php')">
 
-				Impression PDF
-			</div> 
-		</div>
-		<div id=Option4>
-			<div id=bouton1 onclick="self.location.href='newCpt.php'">
-				Créer un compte	
-			</div>
-		</div>
-	</div>
-	<div id=MenuA2>
-		<div id=Option5>
-			<div id=bouton1 onclick="self.location.href='confPurge.php'">
 
-				purger les commandes
-			</div> 
-		</div>
-	</div>
-	<?php
-		}
-	?>
+<div id=MenuP>                                                                          
+	<div id=Option5>                                                              
+		<div id=bouton1 onclick="self.location.href='purge.php'">             
+                                effectuer la purge                                                       
+	</div>                                                                    
+</div>  
+
 </div>
-
-
 		<?php
 }
 else {
@@ -114,5 +79,9 @@ else {
 
 $connection2->closeCursor();
 ?>
+
+
 </body>
 </html>
+
+
