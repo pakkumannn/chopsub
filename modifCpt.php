@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <?php
@@ -6,7 +5,7 @@ include "connexion.php";
 $bdd = connexion();
 ?>
 <head>
-<link href="./css/StyleIdenti.css" rel="stylesheet" media="all" type="text/css">
+<link href="../chopsub/css/StyleNewCpt.css" rel="stylesheet" media="all" type="text/css">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
@@ -40,32 +39,52 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonDH onclick="self.location.href='deconnexion.php'">
+			<div id=boutonD onclick="self.location.href='deconnexion.php'">
 				déconnexion	
 			</div>
 	</div>
 </div>
-	<?php
-	$connection->closeCursor();
-	?>
 <div id=page>
+	<div id=titre> CREATION D'UN NOUVEAU COMPTE </div>
+	<form action="creationCpt.php" method="post">
 
+<?php
+$connection = $bdd->query("SELECT * FROM identi");
+$donnees1 = $connection->fetch();
 
-	<?php
-		$supp = $bdd->query("delete from commande");
-	?>
+while($row = $donnees->fetch()) $rows[$ligne++] = $row;
+ 
+                        foreach( array('champ1') as $champ ){
+            ?><tr><?
+                        echo "<td>nom du champ1</td>";
+            foreach( $rows as $row )
+            echo "<td>".$row[$champ]."</td>";
+            ?></tr><?
+            }
+/* je répète le foreach pour pouvoir affiche le nom des champs dans la première colonne*/
+                        foreach( array('champ2') as $champ ){
+            ?><tr><?
+                        echo "<td>nom du champ2</td>";
+            foreach( $rows as $row )
+            echo "<td>".$row[$champ]."</td>";
+            ?></tr><?
+            }
 
-<div id=text>
-	Purge OK
-</div>	
-	<div id=boutonD onclick="self.location.href='identification.php'">
+?>
+
+	<div id=footer>
+
+			<div id=bouton1 onclick="self.location.href='identification.php'">
 				ACCUEIL
+			</div>
+		        <input type="submit" value="VALIDER" id="boutonV">
 	</div>
-
-
-
+	</div>
+		</div>
+</form>
 </div>
-		<?php
+
+<?php
 }
 else {
 	?>
