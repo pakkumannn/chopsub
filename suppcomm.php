@@ -60,7 +60,7 @@ if ($donnees1['nb1']==1) {
 <div id=page>
 
 <div id=text>
-	Votre commande vient d'être supprimée vous allez être redirigé dndans 5 secondes
+	Votre commande vient d'être supprimée, vous allez être redirigé dans 5 secondes
 	<?php 
 	$menu1 = $bdd->query("delete FROM commande where nom='".$login."'");
 	?>
