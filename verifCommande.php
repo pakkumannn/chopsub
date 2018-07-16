@@ -86,7 +86,7 @@ Si pas de commande Affichage de la page
 <?php
 if ($_POST['pain']=='' || $_POST['taille']=='' || $_POST['viande']=='' || $_POST['fromage']=='' || $_POST['temperature']=='' || $_POST['sauce']=='') {
     echo "<div class=text>";
-	echo "Vous avez une erreur dans votre commande vous avez oublié un ingredient";
+	echo "Vous avez une erreur dans votre commande, vous avez oublié un ingrédient";
 	echo "<div id=footer>";
 	?>
 		<a href="javascript:history.back()">RETOUR</a>
