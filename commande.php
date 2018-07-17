@@ -116,7 +116,7 @@ Si pas de commande
 			</div>
 			<div class=P1>
 				<div class=CocheP1>
-				<input type="radio" name="pain" value="P.Origan" id="P.Origan" />
+				<input type="radio" name="pain" value="Parmesan Origan" id="P.Origan" />
 				</div>
 				<div class=TitreP1>
 				Parmesan/Origan
