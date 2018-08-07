@@ -50,7 +50,7 @@ if ($donnees1['nb1']==1) {
 	</div>
 	<div id=deco>
 			<div id=boutonD onclick="self.location.href='deconnexion.php'">
-				deconnexion	
+				déconnexion	
 			</div>
 	</div>
 </div>
@@ -86,7 +86,7 @@ Si pas de commande Affichage de la page
 <?php
 if ($_POST['pain']=='' || $_POST['taille']=='' || $_POST['viande']=='' || $_POST['fromage']=='' || $_POST['temperature']=='' || $_POST['sauce']=='') {
     echo "<div class=text>";
-	echo "Vous avez une erreur dans votre commande vous avez oublié un ingredient";
+	echo "Vous avez une erreur dans votre commande, vous avez oublié un ingrédient";
 	echo "<div id=footer>";
 	?>
 		<a href="javascript:history.back()">RETOUR</a>
@@ -101,33 +101,33 @@ else {
 	</div>
 	<div class=ligne1>
 		<div class=col1> PAIN :</div>
-		<div class=col2> <? echo $_POST['pain']; ?></div>
+		<div class=col2> <?php echo $_POST['pain']; ?></div>
 	</div>
 	<div class=ligne1>
 		<div class=col1> TAILLE :</div>
-		<div class=col2> <? echo $_POST['taille']; ?></div>
+		<div class=col2> <?php echo $_POST['taille']; ?></div>
 	</div>
 	<div class=ligne1>
 		<div class=col1> VIANDE :</div>
-		<div class=col2> <? echo $_POST['viande']; ?></div>
+		<div class=col2> <?php echo $_POST['viande']; ?></div>
 	</div>
 	<div class=ligne1>
 		<div class=col1> FROMAGE :</div>
-		<div class=col2> <? echo $_POST['fromage']; ?></div>
+		<div class=col2> <?php echo $_POST['fromage']; ?></div>
 	</div>
 	<div class=ligne1>
 		<div class=col1> TEMPERATURE :</div>
-		<div class=col2> <? echo $_POST['temperature']; ?></div>
+		<div class=col2> <?php echo $_POST['temperature']; ?></div>
 	</div>
 	<div class=ligne1>
 		<div class=col1> SAUCE :</div>
-		<div class=col2> <? echo $_POST['sauce']; ?></div>
+		<div class=col2> <?php echo $_POST['sauce']; ?></div>
 	</div>
 	<div class=ligne1>
 		<div class=col1> LEGUMES :</div>
 		<div class=col2> <?php echo $_POST['legume1']; ?> </div>
 	</div>
-	<? if ($_POST['legume2']!=''){
+	<?php if ($_POST['legume2']!=''){
 		echo "<div class=ligne1>";
 			echo "<div class=col2b>";
 				echo $_POST['legume2'];

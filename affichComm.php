@@ -41,7 +41,7 @@ if ($donnees1['nb1']==1) {
 	</div>
 	<div id=deco>
 			<div id=boutonD onclick="self.location.href='deconnexion.php'">
-				deconnexion	
+				déconnexion	
 			</div>
 	</div>
 </div>
@@ -78,33 +78,33 @@ $donnees2 = $menu2->fetch();
 	</div>
 	<div class=ligne1>
 		<div class=col1> PAIN :</div>
-		<div class=col2> <? echo $donnees2['pain']; ?></div>
+		<div class=col2> <?php echo $donnees2['pain']; ?></div>
 	</div>
 	<div class=ligne1>
 		<div class=col1> TAILLE :</div>
-		<div class=col2> <? echo $donnees2['taille']; ?></div>
+		<div class=col2> <?php echo $donnees2['taille']; ?></div>
 	</div>
 	<div class=ligne1>
 		<div class=col1> VIANDE :</div>
-		<div class=col2> <? echo $donnees2['viande']; ?></div>
+		<div class=col2> <?php echo $donnees2['viande']; ?></div>
 	</div>
 	<div class=ligne1>
 		<div class=col1> FROMAGE :</div>
-		<div class=col2> <? echo $donnees2['fromage']; ?></div>
+		<div class=col2> <?php echo $donnees2['fromage']; ?></div>
 	</div>
 	<div class=ligne1>
 		<div class=col1> TEMPERATURE :</div>
-		<div class=col2> <? echo  $donnees2['temperature']; ?></div>
+		<div class=col2> <?php echo  $donnees2['temperature']; ?></div>
 	</div>
 	<div class=ligne1>
 		<div class=col1> SAUCE :</div>
-		<div class=col2> <? echo  $donnees2['sauce']; ?></div>
+		<div class=col2> <?php echo  $donnees2['sauce']; ?></div>
 	</div>
 	<div class=ligne1>
 		<div class=col1> LEGUMES :</div>
 		<div class=col2> <?php echo  $donnees2['legume1']; ?> </div>
 	</div>
-	<? if ($donnees2['legume2']!=''){
+	<?php if ($donnees2['legume2']!=''){
 		echo "<div class=ligne1>";
 			echo "<div class=col2b>";
 				echo  $donnees2['legume2'];

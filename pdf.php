@@ -1,8 +1,8 @@
 <?php
-mysql_connect('localhost','chopine','chopine') or die("ERROR DATABASE CONNECTION");
-mysql_select_db('chopine') or die("DATA SELECTION ERRROR");
+$db=mysqli_connect("localhost","chopsub","chopsub");
+mysqli_select_db($db,"chopsub");
 $query="select * from commande";
-$resultat=mysql_query($query);
+$resultat=mysqli_query($db,$query);
 Include("phpToPDF.php");
 $PDF = new phpToPDF();
 $PDF->AddPage(L);
@@ -10,8 +10,8 @@ $PDF->AddPage(L);
 $PDF->SetFont('Arial','B',11);
 $PDF->MultiCell(0, 10, "Formulaire menu\n Subway Chopine", 1, "C", 0);
 $PDF->Ln(5);
-while ($donnee=mysql_fetch_array($resultat)){;
-//$donnee=mysql_fetch_array($resultat);
+while ($donnee=mysqli_fetch_array($resultat)){;
+//$donnee=mysqli_fetch_array($resultat);
 // Dénition des propriés du tableau.
 $proprietesTableau = array(
 	'TB_ALIGN' => 'L',
