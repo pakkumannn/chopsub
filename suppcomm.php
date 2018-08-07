@@ -12,7 +12,7 @@ $bdd = connexion();
 error_reporting(E_ALL);
 ?>
 <head>
-<link href="../chopsub/css/StyleAffichComm.css" rel="stylesheet" media="all" type="text/css">
+<link href="./css/StyleAffichComm.css" rel="stylesheet" media="all" type="text/css">
 </head>
 
 <body>
