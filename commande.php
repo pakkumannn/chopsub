@@ -5,7 +5,7 @@ include "connexion.php";
 $bdd = connexion();
 ?>
 <head>
-	<link href="../chopsub/css/StyleComm.css" rel="stylesheet" media="all" type="text/css">
+	<link href="./css/StyleComm.css" rel="stylesheet" media="all" type="text/css">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
@@ -116,7 +116,7 @@ Si pas de commande
 			</div>
 			<div class=P1>
 				<div class=CocheP1>
-				<input type="radio" name="pain" value="P.Origan" id="P.Origan" />
+				<input type="radio" name="pain" value="Parmesan Origan" id="P.Origan" />
 				</div>
 				<div class=TitreP1>
 				Parmesan/Origan
@@ -173,7 +173,7 @@ Si pas de commande
 	</div>
 	<div id=Viande>
 		<div class=titre>
-			<b>3 - Choix de la viande </b>
+			<b>3 - Choix de la viande : 15 / 30 cm</b>
 		</div>
 		<div class=ViandeL1>
 			<div class=TypeV1>

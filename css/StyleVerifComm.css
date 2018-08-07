@@ -161,14 +161,14 @@ div.col1 {
 }
 
 div.col2{
-	width: 100px;
+	width: 150px;
 	margin: auto;
 	height: auto;
 	float: left;
 	text-align: left;
 }
 div.col2b{
-	width: 100px;
+	width: 120px;
 	margin: auto;
 	padding-left: 150px;
 	height: auto;

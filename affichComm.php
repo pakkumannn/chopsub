@@ -171,7 +171,7 @@ $donnees2 = $menu2->fetch();
 ?>
 	<div class=ligne1>
 		<div class=col1> PRIX:</div>
-		<div class=col2> <? echo $donnees2['prix']; ?> euros </div>
+		<div class=col2> <?php echo $donnees2['prix']; ?> euros </div>
 	</div>
 	
 <div id=footer>
