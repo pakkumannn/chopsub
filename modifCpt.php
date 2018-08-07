@@ -5,7 +5,7 @@ include "connexion.php";
 $bdd = connexion();
 ?>
 <head>
-<link href="../chopsub/css/StyleNewCpt.css" rel="stylesheet" media="all" type="text/css">
+<link href="./css/StyleNewCpt.css" rel="stylesheet" media="all" type="text/css">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
@@ -44,34 +44,27 @@ if ($donnees1['nb1']==1) {
 			</div>
 	</div>
 </div>
+
 <div id=page>
 	<div id=titre> CREATION D'UN NOUVEAU COMPTE </div>
 	<form action="creationCpt.php" method="post">
 
 <?php
-$connection = $bdd->query("SELECT * FROM identi");
-$donnees1 = $connection->fetch();
 
-while($row = $donnees->fetch()) $rows[$ligne++] = $row;
- 
-                        foreach( array('champ1') as $champ ){
-            ?><tr><?
-                        echo "<td>nom du champ1</td>";
-            foreach( $rows as $row )
-            echo "<td>".$row[$champ]."</td>";
-            ?></tr><?
-            }
-/* je répète le foreach pour pouvoir affiche le nom des champs dans la première colonne*/
-                        foreach( array('champ2') as $champ ){
-            ?><tr><?
-                        echo "<td>nom du champ2</td>";
-            foreach( $rows as $row )
-            echo "<td>".$row[$champ]."</td>";
-            ?></tr><?
-            }
+$connection = $bdd->query("SELECT * FROM identi");
+$resultat = $connection->fetch();
+
+
+while ($row = mysql_fetch_assoc($resultat));
+{
+	echo $resultat['login'];
+	foreach ($row as $rows){
+		echo $resultat['login'];
+	}; 
+
+};
 
 ?>
-
 	<div id=footer>
 
 			<div id=bouton1 onclick="self.location.href='identification.php'">
