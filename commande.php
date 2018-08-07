@@ -5,7 +5,7 @@ include "connexion.php";
 $bdd = connexion();
 ?>
 <head>
-	<link href="../chopsub/css/StyleComm.css" rel="stylesheet" media="all" type="text/css">
+	<link href="./css/StyleComm.css" rel="stylesheet" media="all" type="text/css">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
@@ -173,7 +173,7 @@ Si pas de commande
 	</div>
 	<div id=Viande>
 		<div class=titre>
-			<b>3 - Choix de la viande </b>
+			<b>3 - Choix de la viande : 15 / 30 cm</b>
 		</div>
 		<div class=ViandeL1>
 			<div class=TypeV1>
