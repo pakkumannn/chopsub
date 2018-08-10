@@ -52,7 +52,7 @@ if ($donnees1['nb1']==1) {
 
 
 	<?php
-		$supp = $bdd->query("delete from commande");
+		$supp = $bdd->query("delete from subway");
 	?>
 
 <div id=text>

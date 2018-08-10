@@ -61,7 +61,7 @@ $connection->closeCursor();
 /********************************************************
 si commande deja passe
 ********************************************************/
-$menu1 = $bdd->query("select count(*) as com from commande where nom='".$login."'");
+$menu1 = $bdd->query("select count(*) as com from subway where nom='".$login."'");
 $donnees1 = $menu1->fetch();
 if ($donnees1['com']!=0) {
 	?>	

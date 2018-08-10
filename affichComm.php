@@ -54,7 +54,7 @@ if ($donnees1['nb1']==1) {
 
 <div id=page>
 	<?php
-	$menu1 = $bdd->query("SELECT COUNT(*) as com FROM commande where nom='".$login."'");
+	$menu1 = $bdd->query("SELECT COUNT(*) as com FROM subway where nom='".$login."'");
 	$donnees1 = $menu1->fetch();
 	if ($donnees1['com']==0) {
 	?>
@@ -70,7 +70,7 @@ if ($donnees1['nb1']==1) {
 }else
 {
 $menu1->closeCursor();
-$menu2 = $bdd->query("SELECT * FROM commande where nom='".$login."'");
+$menu2 = $bdd->query("SELECT * FROM subway where nom='".$login."'");
 $donnees2 = $menu2->fetch();
 ?>
 	<div id=text>

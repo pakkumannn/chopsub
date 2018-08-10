@@ -61,7 +61,7 @@ $connection->closeCursor();
 /********************************************************
 si commande deja passe
 ********************************************************/
-$menu1 = $bdd->query("select count(*) as com from commande where nom='".$login."'");
+$menu1 = $bdd->query("select count(*) as com from subway where nom='".$login."'");
 $donnees1 = $menu1->fetch();
 if ($donnees1['com']!=0) {
 	?>	
@@ -97,7 +97,7 @@ if ($_GET['pain']=='' || $_GET['taille']=='' || $_GET['viande']=='' || $_GET['fr
 else {
 
 $date = date("Y-m-d");
-$bdd->exec("INSERT INTO commande (nom, pain, taille, viande, fromage, temperature, legume1, legume2, legume3, legume4, legume5, legume6, legume7, legume8, legume9, legume10, sauce, date, prix) VALUES ('".$login."','".$_GET['pain']."','".$_GET['taille']."','".$_GET['viande']."','".$_GET['fromage']."','".$_GET['temperature']."','".$_GET['legume1']."','".$_GET['legume2']."','".$_GET['legume3']."','".$_GET['legume4']."','".$_GET['legume5']."','".$_GET['legume6']."','".$_GET['legume7']."','".$_GET['legume8']."','".$_GET['legume9']."','".$_GET['legume10']."','".$_GET['sauce']."','".$date."','".$_GET['prix']."');");
+$bdd->exec("INSERT INTO subway (nom, pain, taille, viande, fromage, temperature, legume1, legume2, legume3, legume4, legume5, legume6, legume7, legume8, legume9, legume10, sauce, date, prix) VALUES ('".$login."','".$_GET['pain']."','".$_GET['taille']."','".$_GET['viande']."','".$_GET['fromage']."','".$_GET['temperature']."','".$_GET['legume1']."','".$_GET['legume2']."','".$_GET['legume3']."','".$_GET['legume4']."','".$_GET['legume5']."','".$_GET['legume6']."','".$_GET['legume7']."','".$_GET['legume8']."','".$_GET['legume9']."','".$_GET['legume10']."','".$_GET['sauce']."','".$date."','".$_GET['prix']."');");
 ?>
 
 	<div id=text>
