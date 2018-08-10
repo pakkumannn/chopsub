@@ -47,16 +47,32 @@ if ($donnees1['nb1']==1) {
 <div id=page>
 	<div id=MenuP>
 		<div id=Option1>
-			<div id=bouton1 onclick="self.location.href='commande.php'">
-				Commander
+			<div id=bouton1 onclick="self.location.href='subway.php'">
+				Subway
 			</div>
 		</div>
 		<div id=Option2>	
-			<div id=bouton2 onclick="self.location.href='affichComm.php'">
-				Visualiser ma commande
+			<div id=bouton2 onclick="self.location.href='pizza.php'">
+				Pizza
 			</div>
 		</div>
 	</div>
+
+
+	<div id=MenuP2>
+                <div id=Option1b>
+                        <div id=bouton1b onclick="self.location.href='burger.php'">
+                                Burger
+                        </div>
+                </div>
+                <div id=Option2b>
+                        <div id=bouton2b onclick="self.location.href='affichComm.php'">
+                                Visualiser ma commande
+                        </div>
+                </div>
+        </div>
+
+
 	<?php
 	$connection->closeCursor();
 	$connection2 = $bdd->query("SELECT admin FROM identi where login='".$login."' AND mdp='".$mdp."'");

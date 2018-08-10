@@ -231,20 +231,22 @@ a:active {
 }
 
 
+div#Option2 {
+        width: 300px;
+        height: 70px;
+      /*background-color: red; */
+        float: left;
+        margin-left: 40px;
+        margin-top: 15px;
+ }       
 
 
-
-
-
-
-
- 
 div#bouton2 {
 	font-family: Arial,sans-serif;
 	font-size: 1.5em;
 	width: 250px;
-	height: 62px;
-	padding-top: 8px;
+	height: 50px;
+	padding-top: 20px;
 	cursor: pointer;
 	margin: auto;
 	text-align: center;
@@ -281,14 +283,111 @@ div#bouton2:active {
 
 
 
- div#Option2 { 
-	width: 300px;
-	height: 70px;
-/*	background-color: red; */
-	float: left;
-	margin-left: 40px;
-	margin-top: 15px;
+ div#MenuP2 {
+        width: 750px;
+        height: 100px;
+        text-align: center;
+        border-width: 3px;
+        margin: auto;
+
  }
+
+ div#Option1b {
+        width: 300px;
+        height: 70px;
+        float: left;
+        margin-left: 60px;
+        margin-top: 15px;
+ }
+div#bouton1b {
+        font-family: Arial,sans-serif;
+        font-size: 1.5em;
+        width: 250px;
+        height: 50px;
+        padding-top: 20px;
+        cursor: pointer;
+        margin: auto;
+        text-align: center;
+        color: black;
+        background: #007536;
+        border-radius: 8px;
+        background: -webkit-linear-gradient( #00B454, #007536);
+        background:    -moz-linear-gradient( #00B454, #007536);
+        background:     -ms-linear-gradient( #00B454, #007536);
+        background:      -o-linear-gradient( #00B454, #007536);
+        background:         linear-gradient( #00B454, #007536);
+        text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
+div#bouton1b:active {
+        font-family: Arial,sans-serif;
+        font-size: 1.5em;
+        width: 250px;
+        height: 50px;
+        padding-top: 20px;
+        cursor: pointer;
+        text-align: center;
+        color: ##02A458;
+        background: #02A458;
+        margin: auto;
+        border-radius: 8px;
+        background: -webkit-linear-gradient( #02A458, #2C2C2C);
+        background:    -moz-linear-gradient( #02A458, #2C2C2C);
+        background:     -ms-linear-gradient( #02A458, #2C2C2C);
+        background:      -o-linear-gradient( #02A458, #2C2C2C);
+        background:         linear-gradient( #02A458, #2C2C2C);
+        text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+        box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+div#Option2b {
+        width: 300px;
+        height: 70px;
+      /*background-color: red; */
+        float: left;
+        margin-left: 40px;
+        margin-top: 15px;
+ }
+
+
+div#bouton2b {
+        font-family: Arial,sans-serif;
+        font-size: 1.5em;
+        width: 250px;
+        height: 62px;
+        padding-top: 8px;
+        cursor: pointer;
+        margin: auto;
+        text-align: center;
+        color: black;
+        background: #007536;
+        border-radius: 8px;
+        background: -webkit-linear-gradient( #00B454, #007536);
+        background:    -moz-linear-gradient( #00B454, #007536);
+        background:     -ms-linear-gradient( #00B454, #007536);
+        background:      -o-linear-gradient( #00B454, #007536);
+        background:         linear-gradient( #00B454, #007536);
+        text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
+div#bouton2b:active {
+        font-family: Arial,sans-serif;
+        font-size: 1.5em;
+        width: 250px;
+        height: 62px;
+        padding-top: 8px;
+        cursor: pointer;
+        text-align: center;
+        color: ##02A458;
+        background: #02A458;
+        margin: auto;
+        border-radius: 8px;
+        background: -webkit-linear-gradient( #02A458, #2C2C2C);
+        background:    -moz-linear-gradient( #02A458, #2C2C2C);
+        background:     -ms-linear-gradient( #02A458, #2C2C2C);
+        background:      -o-linear-gradient( #02A458, #2C2C2C);
+        background:         linear-gradient( #02A458, #2C2C2C);
+        text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+        box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+
  
  
  div#MenuA { 
@@ -299,7 +398,7 @@ div#bouton2:active {
 	/*border-style: solid;
  	border-color: black;*/
 	margin: auto;
-	margin-top: 20px;
+	margin-top: 60px;
 	padding-bottom: 20px;	
  }
 
