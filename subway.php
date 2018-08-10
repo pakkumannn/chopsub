@@ -84,7 +84,7 @@ Si pas de commande
 ?>
 <div id=page>
         <div id=formulaire>
-        <form action="verifCommande.php" method="post">
+        <form action="verifSubway.php" method="post">
 	<div id=pain>		
 		<div class=titre>
 			<b>1 -  Choix du pain : </b>
