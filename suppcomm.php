@@ -63,7 +63,6 @@ if ($donnees1['nb1']==1) {
 	Votre commande vient d'être supprimée, vous allez être redirigé dans 5 secondes
 	<?php 
 	$menu1 = $bdd->query("delete FROM subway where nom='".$login."'");
-	$menu2 = $bdd->query("delete FROM commande where nom='".$login."'");
 	?>
 	
 </div>
