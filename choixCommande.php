@@ -1,13 +1,19 @@
-
+<?php 
+header ("Refresh:3 ;URL=identification.php");
+// Redirection vers page_suivante.php après un délai de 5 secondes
+// durant lesquelles la page actuelle (page_premiere.php, par exemple) est affichée
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <html>
 <?php
 include "connexion.php";
 $bdd = connexion();
+error_reporting(E_ALL);
+$date = date("Y-m-j");
 ?>
 <head>
-<link href="./css/StyleIdenti.css" rel="stylesheet" media="all" type="text/css">
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="./css/StyleAffichComm.css" rel="stylesheet" media="all" type="text/css">
 </head>
 
 <body>
@@ -40,7 +46,7 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonDH onclick="self.location.href='deconnexion.php'">
+			<div id=boutonD onclick="self.location.href='deconnexion.php'">
 				déconnexion	
 			</div>
 	</div>
@@ -48,26 +54,25 @@ if ($donnees1['nb1']==1) {
 	<?php
 	$connection->closeCursor();
 	?>
+
+
+
+
 <div id=page>
 
-
-	<?php
-		$supp = $bdd->query("delete from subway");
-		$supp1 = $bdd->query("delete from commande");
-		$supp2 = $bdd->query("delete from choix");
-	?>
-
 <div id=text>
-	Purge OK
-</div>	
-	<div id=boutonD onclick="self.location.href='identification.php'">
-				ACCUEIL
-	</div>
-
-
-
+	Vous avez selectionné 
+	<?php echo $_POST['commande']; 
+//	$menu1 = $bdd->query("delete FROM subway where nom='".$login."'");
+//	$menu2 = $bdd->query("delete from commande where id='".$login."'");
+	$menu = $bdd->query("insert choix(choix, jour) values('".$_POST['commande']."','".$date."');");
+	?>
+	
 </div>
-		<?php
+
+
+<?php
+echo "</div>";
 }
 else {
 	?>
@@ -88,12 +93,12 @@ else {
 
 	<?php
 }	
-
 $connection2->closeCursor();
 ?>
 
 
+
+
+
 </body>
 </html>
-
-
