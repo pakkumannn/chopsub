@@ -44,6 +44,48 @@ if ($donnees1['nb1']==1) {
 			</div>
 	</div>
 </div>
+
+
+
+<!--***********************************************************
+                Affichage du menu si admin
+************************************************************--!>
+
+<?php
+	$connection->closeCursor();
+        $connection2 = $bdd->query("SELECT admin FROM identi where login='".$login."' AND mdp='".$mdp."'");
+        $donnee2 = $connection2->fetch();
+        if ($donnee2['admin']==1) {
+        	?>
+	        <div id=menu>
+			<div id=type1>
+				 <form action="choixCommande.php" method="post">
+					<input type="submit" value="SUBWAY" name="commande" id="choix1">
+				</form>
+			</div>	
+
+			<div id=type2>
+                                 <form action="choixCommande.php" method="post">
+                                        <input type="submit" value="PIZZA" name="commande" id="choix2">
+                                </form>
+                        </div>
+
+
+			<div id=type3>
+                                 <form action="choixCommande.php" method="post">
+                                        <input type="submit" value="BURGER" name="commande" id="choix3">
+                                </form>
+                        </div>
+	        </div>
+	        <?php
+        } ?>
+
+
+<!-- ***************************************************************
+				Affichage des boutons de commandes
+****************************************************************** -->
+
+
 <div id=page>
 	<div id=MenuP>
 		<div id=Option1>
@@ -74,6 +116,9 @@ if ($donnees1['nb1']==1) {
 
 
 	<?php
+		/*-----------------------------------------------------------------
+				Affichage des options Administrateur
+		------------------------------------------------------------------*/
 	$connection->closeCursor();
 	$connection2 = $bdd->query("SELECT admin FROM identi where login='".$login."' AND mdp='".$mdp."'");
 	$donnee2 = $connection2->fetch();

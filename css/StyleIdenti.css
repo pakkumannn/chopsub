@@ -1,3 +1,6 @@
+/*---------------------------------------------------
+		Entête 
+----------------------------------------------------*/
 div#header {
 	width: 800px;	
 	height: 176px;
@@ -33,6 +36,178 @@ div#deco {
 	float: right;
 	color: white;
  }
+
+/*-------------------------------------------------
+		Menu choix
+-------------------------------------------------*/
+
+ div#menu {
+ width: 800px;
+ height: 30px;
+ background-color: #228751;
+ padding-top: 10px;
+ margin: auto;
+ padding-bottom: 10px;
+ border-radius: 10px;
+ text-align: center;
+ border-width: 3px;
+ }
+ div#type1 {
+	width: 140px;
+        height: 30px;
+        float: left;
+	margin-left: 100px;
+ }
+#choix1 {
+	text-decoration: none;
+	border: 0px;
+        font-family: Arial,sans-serif;
+        font-size: 1em;
+        width: 100px;
+        height: 25px;
+        padding-top: 5px;
+        cursor: pointer;
+        margin: auto;
+        text-align: center;
+        color: black;
+        background: #007536;
+        border-radius: 8px;
+        background: -webkit-linear-gradient( #00B454, #007536);
+        background:    -moz-linear-gradient( #00B454, #007536);
+        background:     -ms-linear-gradient( #00B454, #007536);
+        background:      -o-linear-gradient( #00B454, #007536);
+        background:         linear-gradient( #00B454, #007536);
+        text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
+#choix1:active {
+	text-decoration: none;
+	border: 0px;
+        font-family: Arial,sans-serif;
+        font-size: 1em;
+        width: 100px;
+        height: 25px;
+        padding-top: 5px;
+        cursor: pointer;
+        text-align: center;
+        color: ##02A458;
+        background: #02A458;
+        margin: auto;
+        border-radius: 8px;
+        background: -webkit-linear-gradient( #02A458, #2C2C2C);
+        background:    -moz-linear-gradient( #02A458, #2C2C2C);
+        background:     -ms-linear-gradient( #02A458, #2C2C2C);
+        background:      -o-linear-gradient( #02A458, #2C2C2C);
+        background:         linear-gradient( #02A458, #2C2C2C);
+        text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+        box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+ div#type2 {
+        width: 110px;
+        height: 30px;
+        float: left;
+        margin-left: 100px;
+ }
+#choix2 {
+        text-decoration: none;
+        border: 0px;
+        font-family: Arial,sans-serif;
+        font-size: 1em;
+        width: 100px;
+        height: 25px;
+        padding-top: 5px;
+        cursor: pointer;
+        margin: auto;
+        text-align: center;
+        color: black;
+        background: #007536;
+        border-radius: 8px;
+        background: -webkit-linear-gradient( #00B454, #007536);
+        background:    -moz-linear-gradient( #00B454, #007536);
+        background:     -ms-linear-gradient( #00B454, #007536);
+        background:      -o-linear-gradient( #00B454, #007536);
+        background:         linear-gradient( #00B454, #007536);
+        text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
+choix2:active {
+        text-decoration: none;
+        border: 0px;
+        font-family: Arial,sans-serif;
+        font-size: 1em;
+        width: 100px;
+        height: 25px;
+        padding-top: 5px;
+        cursor: pointer;
+        text-align: center;
+        color: ##02A458;
+        background: #02A458;
+        margin: auto;
+        border-radius: 8px;
+        background: -webkit-linear-gradient( #02A458, #2C2C2C);
+        background:    -moz-linear-gradient( #02A458, #2C2C2C);
+        background:     -ms-linear-gradient( #02A458, #2C2C2C);
+        background:      -o-linear-gradient( #02A458, #2C2C2C);
+        background:         linear-gradient( #02A458, #2C2C2C);
+        text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+        box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+ div#type3 {
+        width: 110px;
+        height: 30px;
+        float: left;
+        margin-left: 100px;
+ }
+ 
+#choix3 {
+        text-decoration: none;
+        border: 0px;
+        font-family: Arial,sans-serif;
+        font-size: 1em;
+        width: 100px;
+        height: 25px;
+        padding-top: 5px;
+        cursor: pointer;
+        margin: auto;
+        text-align: center;
+        color: black;
+        background: #007536;
+        border-radius: 8px;
+        background: -webkit-linear-gradient( #00B454, #007536);
+        background:    -moz-linear-gradient( #00B454, #007536);
+        background:     -ms-linear-gradient( #00B454, #007536);
+        background:      -o-linear-gradient( #00B454, #007536);
+        background:         linear-gradient( #00B454, #007536);
+        text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+}
+#choix3:active {
+        text-decoration: none;
+        border: 0px;
+        font-family: Arial,sans-serif;
+        font-size: 1em;
+        width: 100px;
+        height: 25px;
+        padding-top: 5px;
+        cursor: pointer;
+        text-align: center;
+        color: ##02A458;
+        background: #02A458;
+        margin: auto;
+        border-radius: 8px;
+        background: -webkit-linear-gradient( #02A458, #2C2C2C);
+        background:    -moz-linear-gradient( #02A458, #2C2C2C);
+        background:     -ms-linear-gradient( #02A458, #2C2C2C);
+        background:      -o-linear-gradient( #02A458, #2C2C2C);
+        background:         linear-gradient( #02A458, #2C2C2C);
+        text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+        box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+
+/* ---------------------------------------------------------------
+		Page principale 
+----------------------------------------------------------------*/
+
+
 div#page {
  
 	width: 800px;
