@@ -1,5 +1,5 @@
 <?php 
-header ("Refresh:3 ;URL=identification.php");
+header ("Refresh:60 ;URL=identification.php");
 // Redirection vers page_suivante.php après un délai de 5 secondes
 // durant lesquelles la page actuelle (page_premiere.php, par exemple) est affichée
 ?>
@@ -59,17 +59,39 @@ if ($donnees1['nb1']==1) {
 
 
 <div id=page>
+<?php
+$connection1 = $bdd->query("SELECT jour FROM choix;");
+$donnees2 = $connection1->fetch();
+$dateJ=strtotime($date);
+$dateBDD=strtotime($donnees2['jour']);
+$dateJ1=$dateBDD+86400;
 
-<div id=text>
-	Vous avez selectionné 
-	<?php echo $_POST['commande']; 
-//	$menu1 = $bdd->query("delete FROM subway where nom='".$login."'");
-//	$menu2 = $bdd->query("delete from commande where id='".$login."'");
-	$menu = $bdd->query("insert choix(choix, jour) values('".$_POST['commande']."','".$date."');");
+	if ($donnees2['jour']=='' || $dateJ>$dateJ1 ) {
+	?>
+		<div id=text>
+        		Vous avez selectionné
+		        <?php echo $_POST['commande'];
+		/*	echo "---";
+			echo $dateJ;
+			echo "----";
+			echo $donnees2['jour'];
+			 echo "----";
+			echo $dateJ1;*/
+			$menu2 = $bdd->query("delete from choix;");
+		        $menu = $bdd->query("insert choix(choix, jour) values('".$_POST['commande']."','".$date."');");
+		        ?>
+		</div>
+		<?php
+		$connection1->closeCursor();
+	}else {	
+		?>
+			<div id=text>
+				La selection du type de commande a déjà été il y a moins de 48h
+			</div>
+		<?php
+	}
 	?>
 	
-</div>
-
 
 <?php
 echo "</div>";
