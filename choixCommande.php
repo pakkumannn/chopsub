@@ -1,5 +1,5 @@
 <?php 
-header ("Refresh:60 ;URL=identification.php");
+header ("Refresh:3 ;URL=identification.php");
 // Redirection vers page_suivante.php après un délai de 5 secondes
 // durant lesquelles la page actuelle (page_premiere.php, par exemple) est affichée
 ?>
