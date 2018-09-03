@@ -5,7 +5,7 @@ include "connexion.php";
 $bdd = connexion();
 ?>
 <head>
-	<link href="./css/StyleVerifSub.css" rel="stylesheet" media="all" type="text/css">
+	<link href="./css/StyleEnregSub.css" rel="stylesheet" media="all" type="text/css">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
@@ -84,66 +84,48 @@ Si pas de commande Affichage de la page
 ?>
 <div id=page>
 <?php
-if ($_POST['pizza']=='' || $_POST['taille']=='' || $_POST['patte']=='') {
+if ($_GET['pizza']=='' || $_GET['taille']=='' || $_GET['patte']=='' || $_GET['prix']=='' ) {
     echo "<div class=text>";
-	echo "Vous avez une erreur dans votre commande, vous avez oublié un ingrédient";
+	echo "Vous avez une erreur dans votre commande ";
 	echo "<div id=footer>";
 	?>
-		<a href="javascript:history.back()">RETOUR</a>
+		<a href="javascript:history.back()"><input type="button" value="retour" id=bouton1></a>
 	<?php
 	echo "</div>";
 	echo "</div>";
 } 
 else {
 
-	if ($_POST['taille']== "40 cm") {
-		$prix='15';
-	}
-	if ($_POST['taille']== "30 cm") {
-                $prix='11';
-        }
+echo $_GET['pizza'];
+echo $_GET['patte'];
+echo $_GET['taille'];
+echo $_GET['prix'];
+
+
+$date = date("Y-m-d");
+
+$bdd->exec("INSERT INTO pizza (nom, pizza, taille, patte, date, prix) VALUES ('".$login."','".$_GET['pizza']."','".$_GET['taille']."','".$_GET['patte']."','".$date."','".$_GET['prix']."');");
+/*$bdd->exec("INSERT INTO pizza (nom, pizza, taille, patte, prix) VALUES ('".$login."','".$_GET['pizza']."','".$_GET['taille']."','".$_GET['patte']."','11');");*/
+$bdd->exec("insert into commande (id, type, jour) values ('".$login."','pizza','".$date."');");
+
 ?>
 
 	<div id=text>
-	Voici le résumé de votre commande
-	</div>
-	<div class=ligne1>
-		<div class=col1> PIZZA :</div>
-		<div class=col2> <?php echo $_POST['pizza']; ?></div>
-	</div>
-	<div class=ligne1>
-		<div class=col1> TAILLE :</div>
-		<div class=col2> <?php echo $_POST['taille']; ?></div>
-	</div>
-	<div class=ligne1>
-		<div class=col1> PATTE :</div>
-		<div class=col2> <?php echo $_POST['patte']; ?></div>
-	</div>
-	<div class=ligne1>
-		<div class=col1> PRIX : </div>
-		<div class=col2> <?php echo $prix; ?></div>
-	</div>
+		Votre commande est enregistrée 
+	</div>	
 
 
-<?php
-echo "<div id=footer>";
-$pizza=$_POST['pizza'];
-$taille=$_POST['taille'];
-$patte=$_POST['patte'];
+			<div id=boutonD onclick="self.location.href='identification.php'">
+					ACCUEIL
+			</div>
 
-?>
-<a href="javascript:history.back()">RETOUR</a>
-<?php
-echo "<a href='enregPizza.php?pizza=".$pizza."&taille=".$taille."&patte=".$patte."&prix=".$prix."'> ENREGISTER </a>";
-
-
-?>
-
-</div>
-</div>
-</div>
 <?php
 }
+?>
+
+</div>
+<?php
+
 }
 
 }
