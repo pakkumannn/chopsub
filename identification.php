@@ -107,23 +107,43 @@ if ($donnees1['nb1']==1) {
 
 <div id=page>
 	<div id=MenuP>
+
+<?php
+/*---------------------------------------------
+	Si choix subway
+-----------------------------------------------*/
+	$connection1 = $bdd->query("SELECT choix from choix;");
+	$donnees2 = $connection1->fetch();
+	if ($donnees2['choix']=='subway'){ 
+?>
+
+
 		<div id=Option1>
 			<div id=bouton1 onclick="self.location.href='subway.php'">
 				Subway
 			</div>
 		</div>
-		<div id=Option2>	
-			<div id=bouton2 onclick="self.location.href='pizza.php'">
-				Pizza
-			</div>
-		</div>
-	</div>
+                <div id=Option2b>
+                        <div id=bouton2b onclick="self.location.href='affichComm.php'">
+                                Visualiser ma commande
+                        </div>
+                </div>
+        </div>
+<?php
+	}
+
+/*---------------------------------------------
+        Si choix pizza
+-----------------------------------------------*/
 
 
-	<div id=MenuP2>
-                <div id=Option1b>
-                        <div id=bouton1b onclick="self.location.href='burger.php'">
-                                Burger
+        if ($donnees2['choix']=='pizza'){
+
+?>
+
+                <div id=Option1>
+                        <div id=bouton1 onclick="self.location.href='pizza.php'">
+                                Pizza
                         </div>
                 </div>
                 <div id=Option2b>
@@ -132,6 +152,48 @@ if ($donnees1['nb1']==1) {
                         </div>
                 </div>
         </div>
+<?php
+	}
+
+/*---------------------------------------------
+        Si choix burger
+-----------------------------------------------*/
+
+
+        if ($donnees2['choix']=='burger'){
+
+?>
+
+                <div id=Option1>
+                        <div id=bouton1 onclick="self.location.href='burger.php'">
+                                burger
+                        </div>
+                </div>
+                <div id=Option2b>
+                        <div id=bouton2b onclick="self.location.href='affichComm.php'">
+                                Visualiser ma commande
+                        </div>
+                </div>
+        </div>
+<?php
+        }
+
+/* ---------------------------------------------
+	si aucun choix
+-----------------------------------------------*/
+
+
+        if ($donnees2['choix']==''){
+
+?>
+
+              <b>  aucun type de commande a été selectionnée veuillez nous contacter !</b>
+	</div>
+                
+<?php
+        }
+?>
+
 
 
 	<?php
@@ -168,7 +230,6 @@ if ($donnees1['nb1']==1) {
 		}
 	?>
 </div>
-
 
 		<?php
 }
