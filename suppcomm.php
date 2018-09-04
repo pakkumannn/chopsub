@@ -64,7 +64,7 @@ if ($donnees1['nb1']==1) {
 	<?php 
 	$menu1 = $bdd->query("delete FROM subway where nom='".$login."'");
 	$menu2 = $bdd->query("delete from commande where id='".$login."'");
-	$menu3 = $bdd->query("delete from pizza where id='".$login."'");
+	$menu3 = $bdd->query("delete from pizza where nom='".$login."'");
 	?>
 	
 </div>

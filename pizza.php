@@ -123,7 +123,7 @@ Si pas de commande
 		<div class=ligne>
 			<div class=P1>
 				<div class=CocheP1>
-				<input type="radio" name="pizza" value="Rein" id="Complet" />
+				<input type="radio" name="pizza" value="Reine" id="Complet" />
 				</div>
 				<div class=TitreP1>
 				<b>Reine</b> (sauce tomate, mozzarella, champignons, jambon)

@@ -77,8 +77,9 @@ $dateJ1=$dateBDD+86400;
 			echo $donnees2['jour'];
 			 echo "----";
 			echo $dateJ1;*/
+			$comm = strtolower($_POST['commande']);
 			$menu2 = $bdd->query("delete from choix;");
-		        $menu = $bdd->query("insert choix(choix, jour) values('".$_POST['commande']."','".$date."');");
+		        $menu = $bdd->query("insert choix(choix, jour) values('".$comm."','".$date."');");
 		        ?>
 		</div>
 		<?php
