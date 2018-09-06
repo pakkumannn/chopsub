@@ -6,7 +6,6 @@ $bdd = connexion();
 ?>
 <head>
 	<link href="./css/StyleEnregSub.css" rel="stylesheet" media="all" type="text/css">
-	<link href="./css/baniere.css" rel="stylesheet" media="all" type="text/css">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
@@ -56,6 +55,7 @@ if ($donnees1['nb1']==1) {
         ?>
         </div>
 
+
 	<div id=banniere>
 		<img src="images/banniere.jpg" />
 	</div>
@@ -70,7 +70,7 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonDH onclick="self.location.href='deconnexion.php'">
+			<div id=boutonD onclick="self.location.href='deconnexion.php'">
 				déconnexion	
 			</div>
 	</div>
@@ -105,7 +105,7 @@ Si pas de commande Affichage de la page
 ?>
 <div id=page>
 <?php
-if ($_GET['pain']=='' || $_GET['taille']=='' || $_GET['viande']=='' || $_GET['fromage']=='' || $_GET['temperature']=='' || $_GET['sauce']=='') {
+if ($_GET['burger']=='' || $_GET['formule1']=='' || $_GET['prix']=='' ) {
     echo "<div class=text>";
 	echo "Vous avez une erreur dans votre commande ";
 	echo "<div id=footer>";
@@ -118,8 +118,9 @@ if ($_GET['pain']=='' || $_GET['taille']=='' || $_GET['viande']=='' || $_GET['fr
 else {
 
 $date = date("Y-m-d");
-$bdd->exec("INSERT INTO subway (nom, pain, taille, viande, fromage, temperature, legume1, legume2, legume3, legume4, legume5, legume6, legume7, legume8, legume9, legume10, sauce, date, prix) VALUES ('".$login."','".$_GET['pain']."','".$_GET['taille']."','".$_GET['viande']."','".$_GET['fromage']."','".$_GET['temperature']."','".$_GET['legume1']."','".$_GET['legume2']."','".$_GET['legume3']."','".$_GET['legume4']."','".$_GET['legume5']."','".$_GET['legume6']."','".$_GET['legume7']."','".$_GET['legume8']."','".$_GET['legume9']."','".$_GET['legume10']."','".$_GET['sauce']."','".$date."','".$_GET['prix']."');");
-$bdd->exec("insert into commande (id, type, jour) values ('".$login."','subway','".$date."');");
+
+$bdd->exec("INSERT INTO burger (nom, burger, formule,  date, prix) VALUES ('".$login."','".$_GET['burger']."','".$_GET['formule1']."','".$date."','".$_GET['prix']."');");
+$bdd->exec("insert into commande (id, type, jour) values ('".$login."','burger','".$date."');");
 
 ?>
 

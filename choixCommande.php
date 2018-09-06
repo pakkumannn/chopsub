@@ -1,5 +1,5 @@
 <?php 
-header ("Refresh:3 ;URL=identification.php");
+header ("Refresh:1 ;URL=identification.php");
 // Redirection vers page_suivante.php après un délai de 5 secondes
 // durant lesquelles la page actuelle (page_premiere.php, par exemple) est affichée
 ?>
@@ -14,6 +14,7 @@ $date = date("Y-m-j");
 ?>
 <head>
 <link href="./css/StyleAffichComm.css" rel="stylesheet" media="all" type="text/css">
+<link href="./css/baniere.css" rel="stylesheet" media="all" type="text/css">
 </head>
 
 <body>
@@ -32,6 +33,25 @@ $donnees1 = $connection->fetch();
 if ($donnees1['nb1']==1) {
 	?>
 <div id=header>
+        <div id=typecom>
+        <?php
+                $connection->closeCursor();
+                $connection3 = $bdd->query("SELECT * FROM choix;");
+                $donnee3 = $connection3->fetch();
+                echo "Commande :";
+                echo "</br>";
+                echo "<div id=resultat>";
+                echo $donnee3['choix'];
+                echo "</div>";
+                echo "</br>";
+                echo "Selectionné le ";
+                echo "</br>";
+                echo "<div id=resultat>";
+                echo $donnee3['jour'];
+                echo "</div>";
+        ?>
+        </div>
+
 	<div id=banniere>
 		<img src="images/banniere.jpg" />
 	</div>
@@ -46,7 +66,7 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonD onclick="self.location.href='deconnexion.php'">
+			<div id=boutonDH onclick="self.location.href='deconnexion.php'">
 				déconnexion	
 			</div>
 	</div>

@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 ?>
 <head>
 <link href="./css/StyleAffichComm.css" rel="stylesheet" media="all" type="text/css">
+<link href="./css/baniere.css" rel="stylesheet" media="all" type="text/css">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
@@ -26,6 +27,24 @@ $donnees1 = $connection->fetch();
 if ($donnees1['nb1']==1) {
 	?>
 <div id=header>
+        <div id=typecom>
+        <?php
+                $connection->closeCursor();
+                $connection3 = $bdd->query("SELECT * FROM choix;");
+                $donnee3 = $connection3->fetch();
+                echo "Commande :";
+                echo "</br>";
+                echo "<div id=resultat>";
+                echo $donnee3['choix'];
+                echo "</div>";
+                echo "</br>";
+                echo "Selectionné le ";
+                echo "</br>";
+                echo "<div id=resultat>";
+                echo $donnee3['jour'];
+                echo "</div>";
+        ?>
+        </div>
 	<div id=banniere>
 		<img src="images/banniere.jpg" />
 	</div>
@@ -40,7 +59,7 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonD onclick="self.location.href='deconnexion.php'">
+			<div id=boutonDH onclick="self.location.href='deconnexion.php'">
 				déconnexion	
 			</div>
 	</div>
@@ -219,7 +238,48 @@ $menu1b = $bdd->query("SELECT type FROM commande where id='".$login."'");
 					</div>
 <?php
 		}
+
+/*-----------------------------------------------------------------------------
+                              vérificaiton si burger
+---------------------------------------------------------------------------*/
+
+
+        $menu3 = $bdd->query("SELECT type FROM commande where id='".$login."'");
+        $donnees3= $menu3->fetch();
+                if ($donnees3['type']=='burger') {
+                        $menu3b = $bdd->query("SELECT * FROM burger where nom='".$login."'");
+                        $donnees3b = $menu3b->fetch();
+
 ?>
+                        <div id=text>
+                                        Voici le résumé de votre commande
+                                        </div>
+                                        <div class=ligne1>
+                                                        <div class=col1> BURGER :</div>
+                                                        <div class=col2> <?php echo $donnees3b['burger']; ?></div>
+                                        </div>
+                                        <div class=ligne1>
+                                                        <div class=col1> FORMULE :</div>
+                                                        <div class=col2> <?php echo $donnees3b['formule']; ?></div>
+                                        </div>
+                                        <div class=ligne1>
+                                                        <div class=col1> PRIX : </div>
+                                                        <div class=col2> <?php echo $donnees3b['prix']; ?></div>
+                                        </div>
+<?php
+                }
+?>
+
+
+
+
+
+
+
+
+
+
+
 	
 <div id=footer>
 			<div id=bouton1 onclick="self.location.href='identification.php'">

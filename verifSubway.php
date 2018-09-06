@@ -6,6 +6,7 @@ $bdd = connexion();
 ?>
 <head>
 	<link href="./css/StyleVerifSub.css" rel="stylesheet" media="all" type="text/css">
+	<link href="./css/baniere.css" rel="stylesheet" media="all" type="text/css">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
@@ -35,6 +36,27 @@ Si login OK
 if ($donnees1['nb1']==1) {
 	?>
 <div id=header>
+
+
+        <div id=typecom>
+        <?php
+                $connection->closeCursor();
+                $connection3 = $bdd->query("SELECT * FROM choix;");
+                $donnee3 = $connection3->fetch();
+                echo "Commande :";
+                echo "</br>";
+                echo "<div id=resultat>";
+                echo $donnee3['choix'];
+                echo "</div>";
+                echo "</br>";
+                echo "Selectionné le ";
+                echo "</br>";
+                echo "<div id=resultat>";
+                echo $donnee3['jour'];
+                echo "</div>";
+        ?>
+        </div>
+
 	<div id=banniere>
 		<img src="images/banniere.jpg" />
 	</div>
@@ -49,7 +71,7 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonD onclick="self.location.href='deconnexion.php'">
+			<div id=boutonDH onclick="self.location.href='deconnexion.php'">
 				déconnexion	
 			</div>
 	</div>

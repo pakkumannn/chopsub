@@ -55,6 +55,8 @@ if ($donnees1['nb1']==1) {
 		$supp = $bdd->query("delete from subway");
 		$supp1 = $bdd->query("delete from commande");
 		$supp2 = $bdd->query("delete from choix");
+		$supp3 = $bdd->query("delete from pizza");
+		$supp3 = $bdd->query("delete from burger");
 	?>
 
 <div id=text>
