@@ -5,8 +5,7 @@ include "connexion.php";
 $bdd = connexion();
 ?>
 <head>
-	<link href="./css/StyleVerifPiz.css" rel="stylesheet" media="all" type="text/css">
-	<link href="./css/baniere.css" rel="stylesheet" media="all" type="text/css">
+	<link href="./css/StyleVerifBur.css" rel="stylesheet" media="all" type="text/css">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
@@ -36,24 +35,23 @@ Si login OK
 if ($donnees1['nb1']==1) {
 	?>
 <div id=header>
-
-	<div id=typecom>
-        <?php
-                $connection->closeCursor();
-                $connection3 = $bdd->query("SELECT * FROM choix;");
-                $donnee3 = $connection3->fetch();
-                echo "Commande :";
-                echo "</br>";
-                echo "<div id=resultat>";
-                echo $donnee3['choix'];
-                echo "</div>";
-                echo "</br>";
-                echo "Selectionné le ";
-                echo "</br>";
-                echo "<div id=resultat>";
-                echo $donnee3['jour'];
-                echo "</div>";
-        ?>
+        <div id=typecom>
+                <?php
+                        $connection->closeCursor();
+                        $connection3 = $bdd->query("SELECT * FROM choix;");
+                        $donnee3 = $connection3->fetch();
+                        echo "Commande :";
+                        echo "</br>";
+                        echo "<div id=resultat>";
+                        echo $donnee3['choix'];
+                        echo "</div>";
+                        echo "</br>";
+                        echo "Selectionné le ";
+                        echo "</br>";
+                        echo "<div id=resultat>";
+                        echo $donnee3['jour'];
+                        echo "</div>";
+                ?>
         </div>
 
 	<div id=banniere>
@@ -70,7 +68,7 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonDH onclick="self.location.href='deconnexion.php'">
+			<div id=boutonD onclick="self.location.href='deconnexion.php'">
 				déconnexion	
 			</div>
 	</div>
@@ -105,7 +103,7 @@ Si pas de commande Affichage de la page
 ?>
 <div id=page>
 <?php
-if ($_POST['pizza']=='' || $_POST['taille']=='' || $_POST['patte']=='') {
+if ($_POST['burger']=='' || $_POST['formule1']=='') {
     echo "<div class=text>";
 	echo "Vous avez une erreur dans votre commande, vous avez oublié un ingrédient";
 	echo "<div id=footer>";
@@ -116,46 +114,67 @@ if ($_POST['pizza']=='' || $_POST['taille']=='' || $_POST['patte']=='') {
 	echo "</div>";
 } 
 else {
+/*----------------------------------------------------
+		Calcul du prix
+----------------------------------------------------*/
 
-	if ($_POST['taille']== "40 cm") {
-		$prix='15';
+	if ($_POST['burger']== "Tony Montagnard" || $_POST['burger']== "Everest" || $_POST['burger']== "Repenti" || $_POST['burger']== "Parrain") {
+		$prix='9';
 	}
-	if ($_POST['taille']== "30 cm") {
-                $prix='11';
+
+        if ($_POST['burger']== "Big Veggie" || $_POST['burger']== "Blues Brother" || $_POST['burger']== "Tommy gun" || $_POST['burger']== "Marshall" || $_POST['burger']== "Smokey Joe") {
+                $prix='8';
         }
+
+        if ($_POST['burger']== "Colorado") {
+                $prix='7';
+        }
+	if ($_POST['burger']== "Chickito") {
+                $prix='6';
+        }
+	if ($_POST['burger']== "Le Gandhi" || $_POST['burger']== "Le Billy Boy") {
+                $prix='5';
+        }
+	if ($_POST['formule1']== "seul") {
+                $prix=$prix;
+        }
+	else{
+		if ($_POST['formule1']== "Cornet de frites") {
+                $prix=$prix + 2.5;
+        	}
+		else {
+		$prix=$prix + 3;
+		}	
+	}
+
 ?>
 
 	<div id=text>
 	Voici le résumé de votre commande
 	</div>
 	<div class=ligne1>
-		<div class=col1> PIZZA :</div>
-		<div class=col2> <?php echo $_POST['pizza']; ?></div>
+		<div class=col1> BURGER :</div>
+		<div class=col2> <?php echo $_POST['burger']; ?></div>
 	</div>
 	<div class=ligne1>
-		<div class=col1> TAILLE :</div>
-		<div class=col2> <?php echo $_POST['taille']; ?></div>
-	</div>
-	<div class=ligne1>
-		<div class=col1> PATTE :</div>
-		<div class=col2> <?php echo $_POST['patte']; ?></div>
+		<div class=col1> formule :</div>
+		<div class=col2> <?php echo $_POST['formule1']; ?></div>
 	</div>
 	<div class=ligne1>
 		<div class=col1> PRIX : </div>
-		<div class=col2> <?php echo $prix; ?></div>
+		<div class=col2> <?php echo $prix ; ?></div>
 	</div>
 
 
 <?php
 echo "<div id=footer>";
-$pizza=$_POST['pizza'];
-$taille=$_POST['taille'];
-$patte=$_POST['patte'];
+$burger=$_POST['burger'];
+$formule1=$_POST['formule1'];
 
 ?>
 <a href="javascript:history.back()">RETOUR</a>
 <?php
-echo "<a href='enregPizza.php?pizza=".$pizza."&taille=".$taille."&patte=".$patte."&prix=".$prix."'> ENREGISTER </a>";
+echo "<a href='enregBurger.php?burger=".$burger."&formule1=".$formule1."&prix=".$prix."'> ENREGISTER </a>";
 
 
 ?>
