@@ -4,7 +4,7 @@
                 {
                         try
                         {
-                                $bdd = new PDO('mysql:host=us-cdbr-iron-east-01.cleardb.net;dbname=heroku_8c727900bd20d2d', 'bdc4ca09f8e066', '0e2c8e68');
+                                $bdd = new PDO('mysql:host=eu-cdbr-west-02.cleardb.net;dbname=heroku_880ea39488893f3', 'b9cfd46243c65b', '8480309c');
                                 return $bdd;
                         }
                                 catch (Exception $e)
