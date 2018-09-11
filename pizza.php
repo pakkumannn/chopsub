@@ -203,7 +203,7 @@ Si pas de commande
                                 <input type="radio" name="pizza" value="Chicago Breakfast" id="Complet" />
                                 </div>
                                 <div class=TitreP1>
-                                <b> Chicago Breakfast</b> (crème, mozzarella, oignons, poulet, bacon, sauce barbexue)
+                                <b> Chicago Breakfast</b> (crème, mozzarella, oignons, poulet, bacon, sauce BBQ)
                                 </div>
                         </div>
                 </div>
