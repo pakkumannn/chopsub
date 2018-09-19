@@ -3,28 +3,28 @@
 -------------------------------------------------*/
 
  div#menu {
- width: 800px;
- height: 30px;
-/* background-color: #228751;*/
- padding-top: 10px;
- margin: auto;
- padding-bottom: 10px;
- border-radius: 10px;
- text-align: center;
- border-width: 3px;
- border-style: groove;
+	 width: 800px;
+	 height: 30px;
+	/* background-color: #228751;*/
+	 padding-top: 5px;
+	 margin: auto;
+	/* padding-bottom: 10px; */
+	 border-radius: 10px;
+	 text-align: center;
+	 border-width: 3px;
+	 border-style: groove;
  }
 
  div#menuTitre {
- width: 800px;
- height: 15px;
-/* background-color: #228751;*/
- padding-top: 10px;
- margin: auto;
- padding-bottom: 3px;
- border-radius: 10px;
- text-align: center;
- border-width: 3px;
+	 width: 800px;
+	 height: 15px;
+	/* background-color: #228751;*/
+	 padding-top: 10px;
+	 margin: auto;
+	 padding-bottom: 5px;
+	 border-radius: 10px;
+	 text-align: center;
+	 border-width: 3px;
  }
 
 
@@ -182,13 +182,16 @@ choix2:active {
 /* ---------------------------------------------------------------
 		Page principale 
 ----------------------------------------------------------------*/
-
-
 div#page {
  
 	width: 800px;
 	height: auto;
-	background-color: #228751; 
+	min-height: 600px;
+/*	background-color: #228751; */
+	background-image:url(../images/font2.jpg);
+	background-size: auto, auto;
+	background-repeat: no-repeat;
+	background-position: center;
 	text-align: center;
 	padding-top: 20px;
 	margin: auto;
@@ -549,8 +552,8 @@ div#bouton2b:active {
 	/*border-style: solid;
  	border-color: black;*/
 	margin: auto;
-	margin-top: 60px;
-	padding-bottom: 20px;	
+	margin-top: 20px;
+	padding-bottom: 5px;	
  }
 
  div#Option3 { 
@@ -581,7 +584,7 @@ div#bouton2b:active {
 	/*border-style: solid;
  	border-color: black;*/
 	margin: auto;
-	margin-top: 20px;
+	margin-top: 60px;
 	padding-bottom: 20px;	
  }
 
