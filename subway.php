@@ -609,7 +609,7 @@ Si pas de commande
 	<div id=footer>
 
 			<div id=bouton1 onclick="self.location.href='identification.php'">
-				ANNULE
+				ANNULER
 			</div>
 		        <input type="submit" value="VALIDER" id="boutonV">
 	</div>

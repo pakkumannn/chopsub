@@ -152,7 +152,7 @@ Si pas de commande
                                 <input type="radio" name="pizza" value="chorizo" id="Complet" />
                                 </div>
                                 <div class=TitreP1>
-                                <b>chorizo</b> (sauce tomate, mozzarella, chorizo)
+                                <b>Chorizo</b> (sauce tomate, mozzarella, chorizo)
                                 </div>
                         </div>
                 </div>
@@ -236,7 +236,7 @@ Si pas de commande
                                 <input type="radio" name="pizza" value="5 fromages" id="Complet" />
                                 </div>
                                 <div class=TitreP1>
-                                <b>5 fromages</b> (sauce tomate, mozzarella, chèvre, fourne d'ambert, reblochon, cheddar)
+                                <b>5 fromages</b> (sauce tomate, mozzarella, chèvre, fourme d'ambert, reblochon, cheddar)
                                 </div>
                         </div>
                 </div>
@@ -280,7 +280,7 @@ Si pas de commande
                                 <input type="radio" name="pizza" value="Forestière" />
                                 </div>
                                 <div class=TitreP1>
-                                <b>Forestiere</b> (crème mozzarella, champignons, oignons, jambon, lardons, origan)
+                                <b>Forestière</b> (crème mozzarella, champignons, oignons, jambon, lardons, origan)
                                 </div>
                         </div>
                 </div>
@@ -315,7 +315,7 @@ Si pas de commande
                                 <input type="radio" name="pizza" value="Kebab" />
                                 </div>
                                 <div class=TitreP1>
-                                <b>Kebab</b> (souce tomate, mozzarella, oignons, poivrons, emincé de kebab, sauce blanche)
+                                <b>Kebab</b> (sauce tomate, mozzarella, oignons, poivrons, emincé de kebab, sauce blanche)
                                 </div>
                         </div>
                 </div>
@@ -325,7 +325,7 @@ Si pas de commande
                                 <input type="radio" name="pizza" value="Fajitas" />
                                 </div>
                                 <div class=TitreP1>
-                                <b>Fajitas</b> (Sauce tomate, mozza, oignons, poivrons, poulet, crème fraiche, épices mexicaines)
+                                <b>Fajitas</b> (Sauce tomate, mozzarella, oignons, poivrons, poulet, crème fraiche, épices mexicaines)
                                 </div>
                         </div>
                 </div>
@@ -366,11 +366,11 @@ Si pas de commande
 
 	<div id=patte>
         	<div id=titrePatte>
-                	<b>Patte :  </b>
+                	<b>Pate :  </b>
 	         </div>
         	 <div id=PatteL1>
                  	<select name="patte">
-                        	<option value="epaisse"> epaisse </option>
+                        	<option value="épaisse"> épaisse </option>
                                 <option value="fine"> fine </option>
                         </select>
              	 </div>
@@ -404,7 +404,7 @@ Si pas de commande
 	<div id=footer>
 
 			<div id=bouton1 onclick="self.location.href='identification.php'">
-				ANNULE
+				ANNULER
 			</div>
 		        <input type="submit" value="VALIDER" id="boutonV">
 	</div>

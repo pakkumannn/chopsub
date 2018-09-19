@@ -169,7 +169,7 @@ if ($donnees1['nb1']==1) {
 	<div id=MenuP> 
 		<div id=Option1>
                         <div id=bouton1 onclick="self.location.href='burger.php'">
-                                burger
+                                Burger
                         </div>
                 </div>
                 <div id=Option1>

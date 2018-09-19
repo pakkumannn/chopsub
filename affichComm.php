@@ -203,7 +203,7 @@ $menu1b = $bdd->query("SELECT type FROM commande where id='".$login."'");
 ?>
 			<div class=ligne1>
 				<div class=col1> PRIX:</div>
-				<div class=col2> <?php echo $donnees2['prix']; ?> euros </div>
+				<div class=col2> <?php echo $donnees2['prix']."€"; ?> </div>
 			</div>
 <?php
 		}
@@ -232,11 +232,11 @@ $menu1b = $bdd->query("SELECT type FROM commande where id='".$login."'");
 					</div>
 					<div class=ligne1>
 							<div class=col1> PATTE :</div>
-							<div class=col2> <?php echo $donnees3b['patte']; ?></div>
+							<div class=col2> <?php echo utf8_encode($donnees3b['patte']); ?></div>
 					</div>
 					<div class=ligne1>
 							<div class=col1> PRIX : </div>
-							<div class=col2> <?php echo $donnees3b['prix']; ?></div>
+							<div class=col2> <?php echo $donnees3b['prix']."€"; ?></div>
 					</div>
 <?php
 		}
@@ -266,7 +266,7 @@ $menu1b = $bdd->query("SELECT type FROM commande where id='".$login."'");
                                         </div>
                                         <div class=ligne1>
                                                         <div class=col1> PRIX : </div>
-                                                        <div class=col2> <?php echo $donnees3b['prix']; ?></div>
+                                                        <div class=col2> <?php echo $donnees3b['prix']."€"; ?></div>
                                         </div>
 <?php
                 }

@@ -164,7 +164,7 @@ else {
 	</div>
 	<div class=ligne1>
 		<div class=col1> PRIX : </div>
-		<div class=col2> <?php echo $prix ; ?></div>
+		<div class=col2> <?php echo $prix."€" ; ?></div>
 	</div>
 
 

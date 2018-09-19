@@ -131,7 +131,7 @@ Si pas de commande
                                 <input type="radio" name="burger" value="Tony Montagnard" />
                         </div>
 			<div id=col1>
-				<b>Tony Montagnard : </b>Pain maîs, steak 165g charolais, bacon, salade,oignons fris, roblochon
+				<b>Tony Montagnard : </b>Pain maïs, steak 165g charolais, bacon, salade,oignons fris, reblochon
 			</div>
 			<div id=col2>
 				9 €
@@ -147,7 +147,7 @@ Si pas de commande
                         </div>
 
                         <div id=col1>
-                               <b>Everest :</b> Pain brioché, steak 185g charolais, rosti, oignons rouges, salade, roblochon
+                               <b>Everest :</b> Pain brioché, steak 185g charolais, rosti, oignons rouges, salade, reblochon
                         </div>
                         <div id=col2>
                                 9 €
@@ -175,7 +175,7 @@ Si pas de commande
                                 <input type="radio" name="burger" value="Parrain" />
                         </div>
                         <div id=col1>
-                               <b>Parrain : </b> Pain brioché, steak 165g charolais, bacon, tomates, oignons rouges, salade, fromade de chevres, moutarde au miel
+                               <b>Parrain : </b> Pain brioché, steak 165g charolais, bacon, tomates, oignons rouges, salade, fromage de chevre, moutarde au miel
                         </div>
                         <div id=col2>
                                 9 €
@@ -203,7 +203,7 @@ Si pas de commande
                                 <input type="radio" name="burger" value="Blues Brother"/>
                         </div>
                         <div id=col1>
-                              <b>  Blues Brother :</b> Pain maîs, steak 165g angus, sauce roquefort, salade, tomate
+                              <b>  Blues Brother :</b> Pain maïs, steak 165g angus, sauce roquefort, salade, tomate
                         </div>
                         <div id=col2>
                                 8 €
@@ -231,7 +231,7 @@ Si pas de commande
                                 <input type="radio" name="burger" value="Marshall" />
                         </div>
                         <div id=col1>
-                              <b>  Marshall :</b> Pain maîs, steak 165g angus,  salade, tomate, oignons rouges, sauce BBQ, cheddar
+                              <b>  Marshall :</b> Pain maïs, steak 165g angus,  salade, tomate, oignons rouges, sauce BBQ, cheddar
                         </div>
                         <div id=col2>
                                 8 €
@@ -259,7 +259,7 @@ Si pas de commande
                                 <input type="radio" name="burger" value="Colorado" />
                         </div>
                         <div id=col1>
-                              <b>  Colorado :</b> pain mais, steak 165g charolais,  oignons fris, cheddar fumé, ketchup, moutarde
+                              <b>  Colorado :</b> pain maïs, steak 165g charolais,  oignons frits, cheddar fumé, ketchup, moutarde
                         </div>
                         <div id=col2>
                                 7 €
@@ -289,7 +289,7 @@ Si pas de commande
                                 <input type="radio" name="burger" value="Le Gandhi" />
                         </div>
                         <div id=col1>
-                              <b>  Le Gandhi :</b> Petit pain brioché, aiguilettes de poulet tika,salade, oignons fris, sauce curry, cheddar
+                              <b>  Le Gandhi :</b> Petit pain brioché, aiguilettes de poulet tikka,salade, oignons frits, sauce curry, cheddar
                         </div>
                         <div id=col2>
                                 5 €
@@ -335,7 +335,7 @@ Si pas de commande
 	<div id=footer>
 
 			<div id=bouton1 onclick="self.location.href='identification.php'">
-				ANNULE
+				ANNULER
 			</div>
 		        <input type="submit" value="VALIDER" id="boutonV">
 	</div>
