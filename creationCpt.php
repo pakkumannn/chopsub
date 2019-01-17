@@ -67,8 +67,8 @@ else {
 	$connection2->closeCursor();
 	if ($_POST['nlogin'] !='' and $_POST['nmdp'] !='')
 	{
-		$req="insert into identi (login, mdp) values ('".$nlogin."','".$nmdp."')";
-		$bdd->exec($req);
+	//	$req="insert into identi (login, mdp) values ('".$nlogin."','".$nmdp."')";
+		$bdd->exec("insert into identi (login, mdp, admin) values ('".$nlogin."','".$nmdp."','0');");
 		?>
 		<div class=text> Creation du compte effectué. </div>
 			<div id=footer>
