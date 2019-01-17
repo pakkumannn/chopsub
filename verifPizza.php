@@ -142,22 +142,27 @@ else {
 		<div class=col1> PATE :</div>
 		<div class=col2> <?php echo $_POST['patte']; ?></div>
 	</div>
+
+        <div class=ligne1>
+                <div class=col1> INFO : </div>
+                <div class=col2> <?php echo $_POST['info']; ?></div>
+        </div>
 	<div class=ligne1>
 		<div class=col1> PRIX : </div>
 		<div class=col2> <?php echo $prix."€"; ?></div>
 	</div>
-
 
 <?php
 echo "<div id=footer>";
 $pizza=$_POST['pizza'];
 $taille=$_POST['taille'];
 $patte=$_POST['patte'];
+$info=$_POST['info'];
 
 ?>
 <a href="javascript:history.back()">RETOUR</a>
 <?php
-echo "<a href='enregPizza.php?pizza=".$pizza."&taille=".$taille."&patte=".$patte."&prix=".$prix."'> ENREGISTER </a>";
+echo "<a href='enregPizza.php?pizza=".$pizza."&taille=".$taille."&patte=".$patte."&prix=".$prix."&info=".$info."'> ENREGISTER </a>";
 
 
 ?>

@@ -388,9 +388,14 @@ Si pas de commande
                         </select>
                  </div>
         </div>
-
-
-
+        <div id=patte>
+                 <div id=titrePatte>
+			<b> Info sup : </b>
+                 </div>
+		 	<div id=PatteL1>
+                                <input type="text" name="info" />
+                        </div>
+         </div>
 
 
 

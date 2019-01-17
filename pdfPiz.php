@@ -67,7 +67,7 @@ $proprieteContenu = array(
 
 
 $contenuTableau = array(
-	" ", $donnee['pizza'], $donnee['patte'], $donnee['taille'],
+	" ", $donnee['pizza'], $donnee['patte'], $donnee['taille']," info :" ,$donnee['info'],
 	);	
 
 // D'abord le PDF, puis les propriés globales du tableau. 

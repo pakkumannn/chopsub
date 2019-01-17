@@ -120,7 +120,7 @@ else {
 
 $date = date("Y-m-d");
 $pate = utf8_decode($_GET['patte']);
-$bdd->exec("INSERT INTO pizza (nom, pizza, taille, patte, date, prix) VALUES ('".$login."','".$_GET['pizza']."','".$_GET['taille']."','".$pate."','".$date."','".$_GET['prix']."');");
+$bdd->exec("INSERT INTO pizza (nom, pizza, taille, patte, date, prix, info) VALUES ('".$login."','".$_GET['pizza']."','".$_GET['taille']."','".$pate."','".$date."','".$_GET['prix']."','".$_GET['info']."');");
 /*$bdd->exec("INSERT INTO pizza (nom, pizza, taille, patte, prix) VALUES ('".$login."','".$_GET['pizza']."','".$_GET['taille']."','".$_GET['patte']."','11');");*/
 $bdd->exec("insert into commande (id, type, jour) values ('".$login."','pizza','".$date."');");
 
