@@ -24,52 +24,18 @@ if(isset($_SESSION['login']))
 $connection = $bdd->query("SELECT COUNT(*) as nb1 FROM identi where login='".$login."' AND mdp='".$mdp."'");
 $donnees1 = $connection->fetch();
 if ($donnees1['nb1']==1) {
+
 	?>
+
+
+
+
+
+
+
 <div id=header>
 	<div id=typecom>
-	<?php /*
-		$connection->closeCursor();	
-		$connection3 = $bdd->query("SELECT * FROM choix;");
-	        $donnee3 = $connection3->fetch();
-		echo "Commande :";
-		echo "</br>"; 
-		echo "<div id=resultat>";
-		echo $donnee3['choix'];
-		echo "</div>";
-		echo "</br>";
-		echo "Selectionné le ";
-		echo "</br>";
-		echo "<div id=resultat>";
-		echo $donnee3['jour']; 
-		echo "</div>"; */
-	?>
-	
 		<div id=nbsub>
-		<?php	/*
-			$connection->closeCursor();
-		        $connection3 = $bdd->query("SELECT count(*) as com FROM subway;");
-                	$donnee3 = $connection3->fetch();
-			echo "nombre de commande :";
-			echo "</br>";
-			echo "subway : ".$donnee3['com'];
-			$connection->closeCursor();
-		?>
-		</div>
-		<div id=nbpizza>
-		<?php   $connection->closeCursor();
-                	$connection4 = $bdd->query("SELECT count(*) as com FROM pizza;");
-	                $donnee4 = $connection4->fetch();
-        	        echo "</br>";
-                	echo "Pizza : ".$donnee4['com'];
-	        ?>
-		</div>
-		<div id=nbburger>
-		<?php   $connection->closeCursor();
-                	$connection5 = $bdd->query("SELECT count(*) as com FROM burger;");
-	                $donnee5 = $connection5->fetch();
-        	        echo "</br>";
-                	echo "Burger : ".$donnee5['com']; */
-	        ?>
 		</div>
 
 	</div>
@@ -94,18 +60,35 @@ if ($donnees1['nb1']==1) {
 	</div>
 </div>
 
-
-
-<!--***********************************************************
-                Affichage du menu si admin
-************************************************************ -->
-
 <?php
-/*	$connection->closeCursor();
-        $connection2 = $bdd->query("SELECT admin FROM identi where login='".$login."' AND mdp='".$mdp."'");
-        $donnee2 = $connection2->fetch();
-        if ($donnee2['admin']==1) { */ 
-        	?>
+$connection->closeCursor();
+$connection3 = $bdd->query("SELECT admin FROM identi where login='".$login."' AND mdp='".$mdp."'");
+$donnees3 = $connection3->fetch();
+if ($donnees3['admin']==2) {
+
+
+?>
+<div id=page>
+        <div id=MenuA>
+                <div id=Option3>
+                        <div id=bouton1 onclick="javascript:window.open('pdfSub.php')">
+
+                                Impression SUB
+                        </div>
+                </div>
+	</div>
+</div>
+<?php
+
+
+}else
+{
+?>
+
+<!-- ***************************************************************
+                Affichage banniere commande 
+****************************************************************** -->
+
 		<div id=menuTitre>
 			Nombre de commandes : 
 		</div>
@@ -183,7 +166,7 @@ if ($donnees1['nb1']==1) {
 		/*-----------------------------------------------------------------
 				Affichage des options Administrateur
 		------------------------------------------------------------------*/
-	$connection->closeCursor();
+	$connection3->closeCursor();
 	$connection2 = $bdd->query("SELECT admin FROM identi where login='".$login."' AND mdp='".$mdp."'");
 	$donnee2 = $connection2->fetch();
 	if ($donnee2['admin']==1) {
@@ -230,6 +213,7 @@ if ($donnees1['nb1']==1) {
 
 		<?php
 }
+}
 else {
 	?>
 		<div id=header>
@@ -249,6 +233,7 @@ else {
 
 	<?php
 }	
+
 
 $connection2->closeCursor();
 ?>
