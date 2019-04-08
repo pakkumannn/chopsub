@@ -27,11 +27,9 @@ if ($donnees1['nb1']==1) {
 
 	?>
 
-
-
-
-
-
+<!--***********************************************************
+                Entete avec login et déco
+************************************************************--!>
 
 <div id=header>
 	<div id=typecom>
@@ -60,13 +58,15 @@ if ($donnees1['nb1']==1) {
 	</div>
 </div>
 
+
+<!--***********************************************************
+                Vérification prestataire et affichage si oui
+************************************************************--!>
 <?php
 $connection->closeCursor();
 $connection3 = $bdd->query("SELECT admin FROM identi where login='".$login."' AND mdp='".$mdp."'");
 $donnees3 = $connection3->fetch();
 if ($donnees3['admin']==2) {
-
-
 ?>
 <div id=page>
         <div id=MenuA>
@@ -79,14 +79,12 @@ if ($donnees3['admin']==2) {
 	</div>
 </div>
 <?php
-
-
 }else
 {
 ?>
 
 <!-- ***************************************************************
-                Affichage banniere commande 
+                Affichage banniere commande si pas presta
 ****************************************************************** -->
 
 		<div id=menuTitre>
