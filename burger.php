@@ -6,6 +6,7 @@ $bdd = connexion();
 ?>
 <head>
 	<link href="./css/StyleBurger.css" rel="stylesheet" media="all" type="text/css">
+	<link href="./css/baniere.css" rel="stylesheet" media="all" type="text/css">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
@@ -71,7 +72,7 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonD onclick="self.location.href='deconnexion.php'">
+			<div id=boutonDH onclick="self.location.href='deconnexion.php'">
 				déconnexion	
 			</div>
 	</div>
@@ -313,6 +314,22 @@ Si pas de commande
                                 8 €
                         </div>
                 </div>
+
+                <div id=ligne1>
+                        <div class=CocheP1>
+                                <input type="radio" name="burger" value="Burger du moment" />
+                        </div>
+                        <div id=col1>
+                              <b>  Burger du moment :</b> Consulter les ingrédients et tarif sur facebook  <a href="https://www.facebook.com/Chicago-Corner-2100568496873456/" target="_blank">Chicago Corner</a>
+                        </div>
+                        <div id=col2>
+                                
+                        </div>
+                        <div id=col3>
+                                
+                        </div>
+                </div>
+
 	</div>
 	<div id=formule>
                 <div id=titre2>
@@ -330,7 +347,15 @@ Si pas de commande
 
                         </select>
                  </div>
-        </div>	
+        </div>
+	<div id=formule>
+		<div id=titre2>
+		 <b>Info sup : </b>
+	<!--	</div>
+		<div id=info1> -->		
+			<input type="text" name="info" />
+		</div>
+	</div>
 
 	<div id=footer>
 

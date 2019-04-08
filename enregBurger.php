@@ -122,7 +122,7 @@ else {
 
 $date = date("Y-m-d");
 
-$bdd->exec("INSERT INTO burger (nom, burger, formule,  date, prix) VALUES ('".$login."','".$_GET['burger']."','".$_GET['formule1']."','".$date."','".$_GET['prix']."');");
+$bdd->exec("INSERT INTO burger (nom, burger, formule,  date, prix, info) VALUES ('".$login."','".$_GET['burger']."','".$_GET['formule1']."','".$date."','".$_GET['prix']."','".$_GET['info']."');");
 $bdd->exec("insert into commande (id, type, jour) values ('".$login."','burger','".$date."');");
 
 ?>

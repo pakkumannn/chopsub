@@ -268,7 +268,11 @@ $menu1b = $bdd->query("SELECT type FROM commande where id='".$login."'");
                                                         <div class=col1> FORMULE :</div>
                                                         <div class=col2> <?php echo $donnees3b['formule']; ?></div>
                                         </div>
-                                        <div class=ligne1>
+ 					<div class=ligne1>
+                                                        <div class=col1> Info : </div>
+                                                        <div class=col2> <?php echo $donnees3b['info']; ?></div>
+                                        </div>
+					<div class=ligne1>
                                                         <div class=col1> PRIX : </div>
                                                         <div class=col2> <?php echo $donnees3b['prix']."€"; ?></div>
                                         </div>

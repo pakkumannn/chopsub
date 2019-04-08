@@ -148,6 +148,9 @@ else {
 		$prix=$prix + 3;
 		}	
 	}
+	if ($_POST['burger']== "Burger du moment") {
+		$prix='inc';
+	}
 
 ?>
 
@@ -166,17 +169,27 @@ else {
 		<div class=col1> PRIX : </div>
 		<div class=col2> <?php echo $prix."€" ; ?></div>
 	</div>
+        <div class=ligne1>
+                <div class=col1> info sup :</div>
+                <div class=col2> <?php echo $_POST['info']; ?></div>
+        </div>
+
+
+
+
+
+
 
 
 <?php
 echo "<div id=footer>";
 $burger=$_POST['burger'];
 $formule1=$_POST['formule1'];
-
+$info=$_POST['info'];
 ?>
 <a href="javascript:history.back()">RETOUR</a>
 <?php
-echo "<a href='enregBurger.php?burger=".$burger."&formule1=".$formule1."&prix=".$prix."'> ENREGISTER </a>";
+echo "<a href='enregBurger.php?burger=".$burger."&formule1=".$formule1."&prix=".$prix."&info=".$info."'> ENREGISTER </a>";
 
 
 ?>
