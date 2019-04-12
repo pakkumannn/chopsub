@@ -60,7 +60,7 @@ if ($donnees1['nb1']==1) {
 
 
 <!--***********************************************************
-                Vérification prestataire et affichage si oui
+                Vérification prestataire 2 sub, 3 burger, 4 pizza  si oui
 ************************************************************--!>
 <?php
 $connection->closeCursor();
@@ -79,8 +79,39 @@ if ($donnees3['admin']==2) {
 	</div>
 </div>
 <?php
-}else
-{
+}else{
+if ($donnees3['admin']==3) {
+?>
+<div id=page>
+        <div id=MenuA>
+                <div id=Option3>
+                        <div id=bouton1 onclick="javascript:window.open('pdfBur.php')">
+
+                                Impression BURGER
+                        </div>
+                </div>
+        </div>
+</div>
+<?php
+}else{
+if ($donnees3['admin']==4) {
+?>
+<div id=page>
+        <div id=MenuA>
+                <div id=Option3>
+                        <div id=bouton1 onclick="javascript:window.open('pdfPiz.php')">
+
+                                Impression PIZZA
+                        </div>
+                </div>
+        </div>
+</div>
+<?php
+}else{
+
+
+
+
 ?>
 
 <!-- ***************************************************************
@@ -210,8 +241,10 @@ if ($donnees3['admin']==2) {
 </div>
 
 		<?php
-}
-}
+} /* else si pas pizza */
+} /* else si pas burger */
+} /* else si pas subway */
+} /* si connexion ok */
 else {
 	?>
 		<div id=header>
