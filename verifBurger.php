@@ -193,7 +193,7 @@ $info=$_POST['info'];
 <a href="javascript:history.back()">RETOUR</a>
 <?php
 echo "<a href='enregBurger.php?burger=".$burger."&formule1=".$formule1."&prix=".$prix."&info=".$info."'> ENREGISTER </a>";
-
+$_SESSION['info1']=$info;
 
 ?>
 
