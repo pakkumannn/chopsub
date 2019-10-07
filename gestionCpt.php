@@ -5,7 +5,8 @@ include "connexion.php";
 $bdd = connexion();
 ?>
 <head>
-<link href="./css/StyleNewCpt.css" rel="stylesheet" media="all" type="text/css">
+<link href="./css/StyleGesCpt.css" rel="stylesheet" media="all" type="text/css">
+<link href="./css/baniere.css" rel="stylesheet" media="all" type="text/css">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 
@@ -25,6 +26,27 @@ $donnees1 = $connection->fetch();
 if ($donnees1['nb1']==1) {
 	?>
 <div id=header>
+
+        <div id=typecom>
+        <?php
+                $connection->closeCursor();
+                $connection3 = $bdd->query("SELECT * FROM choix;");
+                $donnee3 = $connection3->fetch();
+                echo "Commande :";
+                echo "</br>";
+                echo "<div id=resultat>";
+                echo $donnee3['choix'];
+                echo "</div>";
+                echo "</br>";
+                echo "Selectionné le ";
+                echo "</br>";
+                echo "<div id=resultat>";
+                echo $donnee3['jour'];
+                echo "</div>";
+        ?>
+        </div>
+
+
 	<div id=banniere>
 		<img src="images/banniere.jpg" />
 	</div>
@@ -39,45 +61,32 @@ if ($donnees1['nb1']==1) {
 	?>
 	</div>
 	<div id=deco>
-			<div id=boutonD onclick="self.location.href='deconnexion.php'">
+			<div id=boutonDH onclick="self.location.href='deconnexion.php'">
 				déconnexion	
 			</div>
 	</div>
 </div>
-
 <div id=page>
-	<div id=titre> CREATION D'UN NOUVEAU COMPTE </div>
-	<form action="creationCpt.php" method="post">
-
-<?php
-
-$connection = $bdd->query("SELECT * FROM identi");
-$resultat = $connection->fetch();
-
-
-while ($row = mysql_fetch_assoc($resultat));
-{
-	echo $resultat['login'];
-	foreach ($row as $rows){
-		echo $resultat['login'];
-	}; 
-
-};
-
-?>
+	<div id=titre> MODIFIER OU CREER UN COMPTE </div>
 	<div id=footer>
 
 			<div id=bouton1 onclick="self.location.href='identification.php'">
 				ACCUEIL
 			</div>
-		        <input type="submit" value="VALIDER" id="boutonV">
+                        <div id=bouton2 onclick="self.location.href='newCpt.php'">
+                               CREATION COMPTE
+                        </div>
+                        <div id=bouton2 onclick="self.location.href='listeCpt.php'">
+                                MODIFIER UN COMPTE
+                        </div>
+
 	</div>
 	</div>
 		</div>
 </form>
 </div>
 
-<?php
+		<?php
 }
 else {
 	?>
