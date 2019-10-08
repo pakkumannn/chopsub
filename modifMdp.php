@@ -76,8 +76,14 @@ if ($donnees1['nb1']==1) {
 	if ($_POST['nmdp']==$_POST['nmdp2'] and $_SESSION['compte']!='' and $_POST['nmdp']!= '' ) {
 		$nmdp=md5($_POST['nmdp']);		
 		$bdd->exec("update identi set mdp='".$nmdp."'where login='".$_SESSION['compte']."';");
-	}else
-	{
+	?>
+	
+		<div id=footer2>
+			<a href='listeCpt.php'>RETOUR</a>
+	<!--		<a href="javascript:history.back()">RETOUR</a> -->
+		</div>
+	<?php
+	}else{
 	?>
 		Les deux mot de passe ne sont pas identique
 		<div id=footer2>

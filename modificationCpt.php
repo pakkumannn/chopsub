@@ -95,7 +95,7 @@ if ($donnees1['nb1']==1) {
 		</form>
         <?php } else{ ?>
         Vous n'avez pas selectionné de compte
-        <div id=footer>
+        <div id=footer2>
                 <a href="javascript:history.back()">RETOUR</a>
          </div>
 	<?php } ?>
