@@ -8,6 +8,10 @@ div#page {
 	margin: auto;
  }
 
+div#tablo {
+ 	padding-left: 200px;
+ }
+
 div#titre{
 	width: 800px;
 	height: 50px;

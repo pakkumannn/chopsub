@@ -67,11 +67,16 @@ if ($donnees1['nb1']==1) {
 	</div>
 </div>
 <div id=page>
+<div id=tablo>
 	<form action="modificationCpt.php" method="post">
 	<table>
 	<tr>
 		<td> Modif </td>
 		<td> login </td>
+		<td> Modif </td>
+		<td> login </td>
+		<td> Modif </td>
+                <td> login </td>
 	</tr>
 	<?php
 		$connection2 = $bdd->query("SELECT login FROM identi");
@@ -106,6 +111,7 @@ echo '</tr>';
 
 ?>
 	</table>
+</div>
         <div id=footer> 
         <a href="javascript:history.back()">RETOUR</a>
 	<!--                <div id=bouton1 onclick="self.location.href='identification.php'"> 
