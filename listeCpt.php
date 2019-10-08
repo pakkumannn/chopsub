@@ -113,11 +113,9 @@ echo '</tr>';
 	</table>
 </div>
         <div id=footer> 
-        <a href="javascript:history.back()">RETOUR</a>
-	<!--                <div id=bouton1 onclick="self.location.href='identification.php'"> 
-                                ANNULER
-                        </div>
-	-->
+		<div id=bouton1 onclick="self.location.href='gestionCpt.php'"> 
+                	RETOUR
+                </div>
                         <input type="submit" value="VALIDER" id="boutonV">
 	</form>
         </div>              
