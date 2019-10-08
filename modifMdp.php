@@ -78,7 +78,13 @@ if ($donnees1['nb1']==1) {
 		$bdd->exec("update identi set mdp='".$nmdp."'where login='".$_SESSION['compte']."';");
 	}else
 	{
-		echo "Les deux mot de passe ne sont pas identique";
+	?>
+		Les deux mot de passe ne sont pas identique
+		<div id=footer2>
+			<a href='listeCpt.php'>RETOUR</a>
+	<!--		<a href="javascript:history.back()">RETOUR</a> -->
+		</div>
+	<?php
 	} 
 	?>
 

@@ -72,6 +72,16 @@ div#footer {
 	padding-top: 20px;
 	padding-left: 140px;
 }
+
+div#footer2 {
+	width: 800px;	
+	height: 70px;
+	text-align: center;
+	margin: auto;
+	padding-top: 20px;
+	padding-left: 320px;
+}
+
 div#bouton1 {
 	font-family: Arial,sans-serif;
 	float: left;
