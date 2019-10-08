@@ -5,7 +5,7 @@ include "connexion.php";
 $bdd = connexion();
 ?>
 <head>
-<link href="./css/StyleModifCpt.css" rel="stylesheet" media="all" type="text/css">
+<link href="./css/StyleSupUser.css" rel="stylesheet" media="all" type="text/css">
 <link href="./css/baniere.css" rel="stylesheet" media="all" type="text/css">
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
@@ -69,39 +69,18 @@ if ($donnees1['nb1']==1) {
 </div>
 <div id=page>
 
-<?php $_SESSION['compte']=$_POST['sup'] ?>
-	<div id=titre> Modification compte </div>
-<!-- Vérificaiton de la varible $_POST['sup']-->
-        <?php if (!empty($_POST['sup'])) { ?>
-		<form action="modifMdp.php" method="post">
-                	<div id=login>
-                        	<div id=text>login  :</div>
-	                        <div id=saisie> <?php echo $_POST['sup'] ?> </div>
-        	        </div>
-                	<div id=mdp>
-                        	<div id=text1> nouveau mot de passe : </div>
-                        	<div id=saisie1> <input type="password" name="nmdp" /> </div>
-				 <div id=text1> confirmation mot de passe : </div>
-				<div id=saisie1> <input type="password" name="nmdp2" /> </div>
-                	</div>
-        		<div id=footer>
-	                        <a href="javascript:history.back()">RETOUR</a>
-				<input type="submit" value="MODIFIER" id="boutonV">
-				
-				<div id=bouton1 onclick="self.location.href='validSupUser.php'">
-                                	SUPPRESSION
-	                        </div>
-			</div>
-		</form>
-        <?php } else{ ?>
-        Vous n'avez pas selectionné de compte
-        <div id=footer2>
-                <a href="javascript:history.back()">RETOUR</a>
-         </div>
-	<?php } ?>
+<div id=titre> Suppression de l'utilisateur <?php echo $_SESSION['compte']?> </div>
+	Etes vous sur de vouloir supprimer le user <b> <?php echo $_SESSION['compte']?>	</b>
+		<div id=footer>
+			<a href='listeCpt.php'>RETOUR</a>
+			<div id=bouton1 onclick="self.location.href='supUser.php'">
+                               	SUPPRESSION
+                        </div>
+		
+		</div>
+
 
 </div>
-
 <?php
 }
 else {
