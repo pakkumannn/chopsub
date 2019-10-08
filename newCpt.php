@@ -93,11 +93,10 @@ if ($donnees1['nb1']==1) {
 
 
 	<div id=footer>
-			<a href="javascript:history.back()">RETOUR</a>
-			<!--
-			<div id=bouton1 onclick="self.location.href='identification.php'">
-				ACCUEIL
-			</div> -->
+	<!--		<a href="javascript:history.back()">RETOUR</a> -->
+			<div id=bouton1 onclick="self.location.href='gestionCpt.php'">
+				RETOUR
+			</div>
 		        <input type="submit" value="VALIDER" id="boutonV">
 	</div>
 	</div>
