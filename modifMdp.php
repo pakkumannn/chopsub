@@ -71,43 +71,51 @@ if ($donnees1['nb1']==1) {
 
 	<div id=titre> Mise à jour du mot de passe </div>
 <?php
+//Récupération du role en base
 $connection2=$bdd->query("select admin, mdp  from identi where login='".$_SESSION['compte']."'");
 $donnees2 = $connection2->fetch();
 
-//	echo $_POST['nmdp'];
-//	echo $_POST['nmdp2']; 
-//	echo $_SESSION['compte'];
-//	echo $_POST['role'];
-//	echo $donnees2[admin];
-?>
-
-	<?php 
+// attribution du libellé 
+if ($_POST['role']=='0'){
+	$role="utilisateur";
+}
+if ($_POST['role']==1){
+	$role="admin";
+};
+if ($_POST['role']==2){
+	$role="subway";
+};
+if ($_POST['role']==3){
+	$role="burger";
+};
+if ($_POST['role']==4){
+	$role="pizza";
+};
+ 
 	// si MDP1=MDP2 et LOGIN not null et MDP1 not null et ROLE diff de ROLEDB  	
 
-	if ($_POST['nmdp']==$_POST['nmdp2'] and $_SESSION['compte']!='' and $_POST['nmdp']!= '' and $_POST['role']!=$donnees2[admin]){
+	if ($_POST['nmdp']==$_POST['nmdp2'] and $_SESSION['compte']!='' and $_POST['nmdp']!= '' and $_POST['role']!=$donnees2['admin']){
 
-				$nmdp=md5($_POST['nmdp']);		
-				$bdd->exec("update identi set mdp='".$nmdp."', admin='".$_POST['role']."'  where login='".$_SESSION['compte']."';");
-				echo "Le mot de passe et le rôle ont été mis à jour";
+		$nmdp=md5($_POST['nmdp']);		
+		$bdd->exec("update identi set mdp='".$nmdp."', admin='".$_POST['role']."'  where login='".$_SESSION['compte']."';");
+		echo "Le mot de passe et le rôle ".$role." ont été mis à jour pour ".$_SESSION['compte'];
 	?>
 	
 		<div id=footer2>
 			<a href='listeCpt.php'>RETOUR</a>
-		<!--	<a href="javascript:history.back()">RETOUR</a> -->
 		</div> 
 	<?php
 	}else{
 		// Si MDP1=MDP2 et LOGIN not null et MDP1 not null et ROLE=ROLEDB
-		if ($_POST['nmdp']==$_POST['nmdp2'] and $_SESSION['compte']!='' and $_POST['nmdp']!= '' and $_POST['role']==$donnees2[admin]){
+		if ($_POST['nmdp']==$_POST['nmdp2'] and $_SESSION['compte']!='' and $_POST['nmdp']!= '' and $_POST['role']==$donnees2['admin']){
 	
-				$nmdp=md5($_POST['nmdp']);		
-				$bdd->exec("update identi set mdp='".$nmdp."', admin='".$_POST['role']."'  where login='".$_SESSION['compte']."';");
-			echo "Le mot de passe a été mis à jour";
+			$nmdp=md5($_POST['nmdp']);		
+			$bdd->exec("update identi set mdp='".$nmdp."', admin='".$_POST['role']."'  where login='".$_SESSION['compte']."';");
+			echo "Le mot de passe a été mis à jour pour ".$_SESSION['compte'];
 		?>
 	
 			<div id=footer2>
 				<a href='listeCpt.php'>RETOUR</a>
-				<!--	<a href="javascript:history.back()">RETOUR</a> -->
 			</div> 
 	<?php
 
@@ -116,13 +124,12 @@ $donnees2 = $connection2->fetch();
 			if ($_POST['nmdp']=='' and $_POST['nmdp2']=='' and $_SESSION['compte']!='' and $_POST['role']!=$donnees2['admin']){
 
 				$bdd->exec("update identi set admin='".$_POST['role']."'  where login='".$_SESSION['compte']."';");
-				echo "Le rôle a été mis à jour";
+				echo "Le rôle ".$role." a été mis à jour pour ".$_SESSION['compte'];
 
 			?>
 	
 				<div id=footer2>
 					<a href='listeCpt.php'>RETOUR</a>
-					<!--	<a href="javascript:history.back()">RETOUR</a> -->
 				</div> 
 			<?php
 
@@ -132,10 +139,9 @@ $donnees2 = $connection2->fetch();
 				if ($_POST['nmdp']=='' and $_POST['nmdp2']=='' and $_SESSION['compte']!='' and $_POST['role']==$donnees2['admin'] or $_POST['nmdp']!=$_POST['nmdp2'] and $_SESSION['compte']!='' and $_POST['role']==$donnees2['admin'] or  $_POST['nmdp']!=$_POST['nmdp2'] and $_SESSION['compte']!='' and $_POST['role']!=$donnees2['admin']){
 i
 	?>
-						Il ya une erreur dans les informations saisies
+						Il y a une erreur dans les informations saisies
 						<div id=footer2>
 							<a href='listeCpt.php'>RETOUR</a>
-							<!-- <a href="javascript:history.back()">RETOUR</a> -->
 						</div> 
 	<?php
 
