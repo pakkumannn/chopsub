@@ -70,27 +70,78 @@ if ($donnees1['nb1']==1) {
 <div id=page>
 
 	<div id=titre> Mise à jour du mot de passe </div>
+<?php
+$connection2=$bdd->query("select admin, mdp  from identi where login='".$_SESSION['compte']."'");
+$donnees2 = $connection2->fetch();
+
+//	echo $_POST['nmdp'];
+//	echo $_POST['nmdp2']; 
+//	echo $_SESSION['compte'];
+//	echo $_POST['role'];
+//	echo $donnees2[admin];
+?>
 
 	<?php 
-		
-	if ($_POST['nmdp']==$_POST['nmdp2'] and $_SESSION['compte']!='' and $_POST['nmdp']!= '' ) {
-		$nmdp=md5($_POST['nmdp']);		
-		$bdd->exec("update identi set mdp='".$nmdp."'where login='".$_SESSION['compte']."';");
+	// si MDP1=MDP2 et LOGIN not null et MDP1 not null et ROLE diff de ROLEDB  	
+
+	if ($_POST['nmdp']==$_POST['nmdp2'] and $_SESSION['compte']!='' and $_POST['nmdp']!= '' and $_POST['role']!=$donnees2[admin]){
+
+				$nmdp=md5($_POST['nmdp']);		
+				$bdd->exec("update identi set mdp='".$nmdp."', admin='".$_POST['role']."'  where login='".$_SESSION['compte']."';");
+				echo "Le mot de passe et le rôle ont été mis à jour";
 	?>
 	
 		<div id=footer2>
 			<a href='listeCpt.php'>RETOUR</a>
-	<!--		<a href="javascript:history.back()">RETOUR</a> -->
-		</div>
+		<!--	<a href="javascript:history.back()">RETOUR</a> -->
+		</div> 
 	<?php
 	}else{
-	?>
-		Les deux mot de passe ne sont pas identique
-		<div id=footer2>
-			<a href='listeCpt.php'>RETOUR</a>
-	<!--		<a href="javascript:history.back()">RETOUR</a> -->
-		</div>
+		// Si MDP1=MDP2 et LOGIN not null et MDP1 not null et ROLE=ROLEDB
+		if ($_POST['nmdp']==$_POST['nmdp2'] and $_SESSION['compte']!='' and $_POST['nmdp']!= '' and $_POST['role']==$donnees2[admin]){
+	
+				$nmdp=md5($_POST['nmdp']);		
+				$bdd->exec("update identi set mdp='".$nmdp."', admin='".$_POST['role']."'  where login='".$_SESSION['compte']."';");
+			echo "Le mot de passe a été mis à jour";
+		?>
+	
+			<div id=footer2>
+				<a href='listeCpt.php'>RETOUR</a>
+				<!--	<a href="javascript:history.back()">RETOUR</a> -->
+			</div> 
 	<?php
+
+		}else{
+			// Si MDP1 est vide et MDP2 est vide et LOGIN not null et ROLE diff de ROLEDB
+			if ($_POST['nmdp']=='' and $_POST['nmdp2']=='' and $_SESSION['compte']!='' and $_POST['role']!=$donnees2['admin']){
+
+				$bdd->exec("update identi set admin='".$_POST['role']."'  where login='".$_SESSION['compte']."';");
+				echo "Le rôle a été mis à jour";
+
+			?>
+	
+				<div id=footer2>
+					<a href='listeCpt.php'>RETOUR</a>
+					<!--	<a href="javascript:history.back()">RETOUR</a> -->
+				</div> 
+			<?php
+
+
+			}else{
+				// Si MDP1 est vide et MDP2 est vide ROLE=ROLEDB
+				if ($_POST['nmdp']=='' and $_POST['nmdp2']=='' and $_SESSION['compte']!='' and $_POST['role']==$donnees2['admin'] or $_POST['nmdp']!=$_POST['nmdp2'] and $_SESSION['compte']!='' and $_POST['role']==$donnees2['admin'] or  $_POST['nmdp']!=$_POST['nmdp2'] and $_SESSION['compte']!='' and $_POST['role']!=$donnees2['admin']){
+i
+	?>
+						Il ya une erreur dans les informations saisies
+						<div id=footer2>
+							<a href='listeCpt.php'>RETOUR</a>
+							<!-- <a href="javascript:history.back()">RETOUR</a> -->
+						</div> 
+	<?php
+
+				}	
+			}	
+		}
 	} 
 	?>
 
