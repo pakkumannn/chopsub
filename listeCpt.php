@@ -71,12 +71,12 @@ if ($donnees1['nb1']==1) {
 	<form action="modificationCpt.php" method="post">
 	<table>
 	<tr>
-		<td> Modif </td>
-		<td> login </td>
-		<td> Modif </td>
-		<td> login </td>
-		<td> Modif </td>
-                <td> login </td>
+		<td> <b> Modif </b> </td>
+		<td> <b> login </b> </td>
+		<td> <b> Modif </b> </td>
+		<td> <b> login </b> </td>
+		<td> <b> Modif </b> </td>
+                <td> <b> login </b> </td>
 	</tr>
 	<?php
 		$connection2 = $bdd->query("SELECT login FROM identi");
